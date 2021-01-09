@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>ВОЛОНТЕРСТВО</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <form action="index.html" method="POST">
+
+        <div>
+            <h2>Волонтерство</h2>
+            <button>
+                <span></span>
+            </button>
+        </div>
+        
+        <p>
+            Заявка
+        </p>
+     
+        <p>
+            Отправьте нам заявку о том, что готовы помочь. Когда нам будет<br>
+            необходима помощь, мы позвоним вам.
+        </p>
+
+        <div>
+            <!-- <label for="name">Фамилия и имя</label> -->
+            <input type="text" id="name" name="username" placeholder="Фамилия и имя" minlength="2" maxlength="56" pattern="[А-Яа-яЁё\s|a-zA-Z\s]{2,56}">
+            
+            <input type="tel" id="phone" name="usernumber" placeholder="Номер телефона" pattern="\d{9}" maxlength="9" required>
+            <label for="phone">Обязательное поле для заполнения</label>
+        </div>
+
+        <div>
+            <label><input type="radio" id="volunteering" value="volunteering" name="volunteering" checked>Хочу помогать на постоянной основе (расписание<br>можно подобрать так, как будет удобно для всех)</label>
+            <label><input type="radio" id="volunteering" value="volunteering" name="volunteering">Готов помогать иногда. Хочу выбрать удобное для меня<br>время</label>
+        </div>
+
+        <textarea name="usercomment" id="comment" cols="22" rows="3" placeholder="Замечания" maxlength="500"></textarea>
+
+        <div>
+            <button type="submit"><span>Отправить заявку</span></button>
+            <button><span>Отмена</span></button>
+        </div>
+
+    </form>
+</body>
