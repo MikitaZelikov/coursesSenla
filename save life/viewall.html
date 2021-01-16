@@ -4,256 +4,285 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>НАШИ ПОДОПЕЧНЫЕ</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="all-our-pets">
-        <div class="head-our-pets">
-            <div>
-                <a>
-                    <span></span>
+    <section class="all-pets">
+        <div class="all-pets__head all-pets-head">
+            <div class="all-pets-head__box-link">
+                <a href="#" class="all-pets-head__link">
+                    <span class="all-pets-head__link_icon"></span>
+                    <span class="all-pets-head__link_text">Вернуться назад</span>
                 </a>
-                <a>Вернуться назад</a>
             </div>
-            <h2>Наши подопечные</h2>
-            <form action="index.html">
-                <p>Показать</p>
+            <h2 class="all-pets-head__title">Наши подопечные</h2>
+            <form class="selection-form" action="index.html">
+                <p class="selection-form__title">Показать</p>
                 <select name="pets" id="pets">
-                    <option value="option1">Коты и собаки</option>
-                    <option value="option2">Коты</option>
-                    <option value="option3">Собаки</option>
+                    <option class="selection-form__option" value="option1">Коты и собаки</option>
+                    <option class="selection-form__option" value="option2">Коты</option>
+                    <option class="selection-form__option" value="option3">Собаки</option>
                 </select>
             </form>
         </div>
-        <div class="conteiner-our-pets">
-            <article>
+        <div class="all-pets__conteiner">
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Моник</p>
-                        <p>Мальчик, 7 месяцев</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Моник</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
+                        <p class="pets-card__text pets-card__text_description">
                             К поводку приучен. Не агрессивный. В еде не привередничает. С другими животными не конфликтует. Привит. Очень плачет и хочет на ручки. Отдается только в добрые руки и под паспорт.
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
-            <article>
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Лунатик</p>
-                        <p>Мальчик, 7 месяцев</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Лунатик</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
+                        <p class="pets-card__text pets-card__text_description">
                             Она не знает, что такое – царапаться и кусаться, она не знает, что такое нападать на других животных
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
-            <article>
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Герда</p>
-                        <p>Мальчик, 7 месяцев</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Герда</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
+                        <p class="pets-card__text pets-card__text_description">
                             К поводку приучен. Не агрессивный. В еде не привередничает. С другими животными не конфликтует. Привит. Очень плачет и хочет на ручки. Отдается только в добрые руки и под паспорт.
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
-            <article>
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Саки</p>
-                        <p>Мальчик, 7 месяцев</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Саки</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
+                        <p class="pets-card__text pets-card__text_description">
                             Веселый и очень игривый, ему так нужны ваша любовь и ласка.У него потрясающая густая шерсть в полосочку, «серьезные» желтые глаза и длиннющие белые усы.
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
-            <article>
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Моника</p>
-                        <p>Девочка, 4 месяца</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Моника</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Девочка, 4 месяца</p>
+                        <p class="pets-card__text pets-card__text_description">
                             Девочке 4 месяца жила в ужасных условиях, бывшая хозяйка могла исчезнуть на двое суток закрыв её одну в комнате без еды, ей нельзя там больше оставаться. Мила очень ласковая, забавная, в еде не привередлива.
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
-            <article>
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Андреантино</p>
-                        <p>Мальчик, 7 месяцев</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Андреантино</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
+                        <p class="pets-card__text pets-card__text_description">
                             Веселый и очень игривый, ему так нужны ваша любовь и ласка.У него потрясающая густая шерсть в полосочку, «серьезные» желтые глаза и длиннющие белые усы.
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
-            <article>
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Моник</p>
-                        <p>Мальчик, 7 месяцев</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Моник</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
+                        <p class="pets-card__text pets-card__text_description">
                             К поводку приучен. Не агрессивный. В еде не привередничает. С другими животными не конфликтует. Привит. Очень плачет и хочет на ручки. Отдается только в добрые руки и под паспорт.
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
-            <article>
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Лунатик</p>
-                        <p>Мальчик, 7 месяцев</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Лунатик</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
+                        <p class="pets-card__text pets-card__text_description">
                             Она не знает, что такое – царапаться и кусаться, она не знает, что такое нападать на других животных
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
-            <article>
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Герда</p>
-                        <p>Мальчик, 7 месяцев</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Герда</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
+                        <p class="pets-card__text pets-card__text_description">
                             К поводку приучен. Не агрессивный. В еде не привередничает. С другими животными не конфликтует. Привит. Очень плачет и хочет на ручки. Отдается только в добрые руки и под паспорт.
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
-            <article>
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Саки</p>
-                        <p>Мальчик, 7 месяцев</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Саки</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
+                        <p class="pets-card__text pets-card__text_description">
                             Веселый и очень игривый, ему так нужны ваша любовь и ласка.У него потрясающая густая шерсть в полосочку, «серьезные» желтые глаза и длиннющие белые усы.
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
-            <article>
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Моника</p>
-                        <p>Девочка, 4 месяца</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Моника</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Девочка, 4 месяца</p>
+                        <p class="pets-card__text pets-card__text_description">
                             Девочке 4 месяца жила в ужасных условиях, бывшая хозяйка могла исчезнуть на двое суток закрыв её одну в комнате без еды, ей нельзя там больше оставаться. Мила очень ласковая, забавная, в еде не привередлива.
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
-            <article>
+            <article class="pets__card pets-card">
                 <figure>
                     <img src="" alt="">
                     <figcaption>
-                        <p>Андреантино</p>
-                        <p>Мальчик, 7 месяцев</p>
-                        <p>
+                        <p class="pets-card__text pets-card__text_name">Андреантино</p>
+                        <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
+                        <p class="pets-card__text pets-card__text_description">
                             Веселый и очень игривый, ему так нужны ваша любовь и ласка.У него потрясающая густая шерсть в полосочку, «серьезные» желтые глаза и длиннющие белые усы.
                         </p>
                     </figcaption>
                 </figure>
-                <button>
+                <button class="button button_card_yellow">
                     <span>Забрать домой</span>
                 </button>
-                <button>
+                <button class="button button_card_transparent">
                     <span>Забрать на передержку</span>
                 </button>
             </article>
         </div>
     </section>
-    <footer>
-        <ul>
-            <li><a href=""><span>Дом или передержка</span></a></li>
-            <li><a href=""><span>Финансовая поддержка</span></a></li>
-            <li><a href=""><span>Корма, лекарства и другие вещи</span></a></li>
-            <li><a href=""><span>Автопомощь</span></a></li>
-            <li><a href=""><span>Волонтерство</span></a></li>
-            <li><a href=""><span>О нас</span></a></li>
-            <li><a href=""><span>Контакты</span></a></li>
+    <footer class="footer">
+        <ul class="footer__list">
+            <li class="footer__item">
+                <a class="footer__link" href="">
+                    <span>Дом или передержка</span>
+                </a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="">
+                    <span>Финансовая поддержка</span>
+                </a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="">
+                    <span>Корма, лекарства и другие вещи</span>
+                </a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="">
+                    <span>Автопомощь</span>
+                </a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="">
+                    <span>Волонтерство</span>
+                </a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="">
+                    <span>О нас</span>
+                </a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link" href="">
+                    <span>Контакты</span>
+                </a>
+            </li>
         </ul>
-        <p>© 2020 БООЗЖ "СПАСИ ЖИЗНЬ"</p>
+        <p class="footer__company-name">© 2020 БООЗЖ "СПАСИ ЖИЗНЬ"</p>
     </footer>
 </body>

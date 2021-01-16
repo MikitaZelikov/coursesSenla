@@ -2,33 +2,34 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ЗАБРАТЬ НА ПЕРЕДЕРЖКУ</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="index.html" method="POST">
+    <form class="form-shelter" action="index.html" method="POST">
 
-        <div>
-            <h2>Забрать домой</h2>
-            <button>
+        <div class="form-shelter__head form-shelter-head">
+            <h2 class="form-shelter-head__title">Забрать на передержку</h2>
+            <button class="form-shelter-head__button">
                 <span></span>
             </button>
         </div>
         
-        <figure>
+        <figure class="form-shelter__cutaway form-shelter-cutaway">
             <img src="" alt="">
             <figcaption>
-                <p>Моник</p>
-                <p>Мальчик, 7 месяцев</p>
+                <p class="form-shelter-cutaway__name">Моник</p>
+                <p class="form-shelter-cutaway__sex-age">Мальчик, 7 месяцев</p>
             </figcaption>
         </figure>
      
-        <p>
-            Оставьте информацию о себе. Мы позвоним вам и договоримся, когда вы сможете забрать себе питомца.
+        <p class="form-shelter__text">
+            Оставьте информацию о себе. Мы позвоним вам и договоримся, когда вы сможете забрать себе питомца на передержку.
         </p>
 
-        <div>
+        <div class="form-shelter__box-input">
             <!-- <label for="name">Фамилия и имя</label> -->
             <input type="text" id="name" name="username" placeholder="Фамилия и имя" minlength="2" maxlength="56" pattern="[А-Яа-яЁё\s|a-zA-Z\s]{2,56}">
             
@@ -36,24 +37,24 @@
             <label for="phone">Обязательное поле для заполнения</label>
         </div>
 
-        <textarea name="usercomment" id="comment" cols="25" rows="3" placeholder="Замечания" maxlength="500"></textarea>
+        <textarea class="form-shelter__textarea" name="usercomment" id="comment" cols="25" rows="3" placeholder="Замечания" maxlength="500"></textarea>
 
-        <p>
+        <p class="form-shelter__contacts">
             Если у вас есть вопросы, можете позвонить нам:<br>
             +375 (33) 6237879  Лена<br>
             +375 (29) 7877791  Ольга<br>
             +375 (29) 5837015  Рита<br>
         </p>
 
-        <p>
+        <p class="form-shelter__text form-shelter__text_color">
             Наши волонтеры будут активно искать будущий дом<br>
             хвостику, пока вы помогаете нам с передержкой.<br>
             Спасибо за помощь!
         </p>
 
-        <div>
-            <button type="submit"><span>Отправить</span></button>
-            <button><span>Отмена</span></button>
+        <div class="form-shelter__box-button">
+            <button class="form-shelter__button-submit" type="submit"><span>Отправить</span></button>
+            <button class="form-shelter__button-cancel"><span>Отмена</span></button>
         </div>
 
     </form>

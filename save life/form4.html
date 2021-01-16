@@ -2,30 +2,31 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ВОЛОНТЕРСТВО</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="index.html" method="POST">
+    <form class="form-shelter" action="index.html" method="POST">
 
-        <div>
-            <h2>Волонтерство</h2>
-            <button>
+        <div class="form-shelter__head form-shelter-head">
+            <h2 class="form-shelter-head__title">Волонтерство</h2>
+            <button class="form-shelter-head__button">
                 <span></span>
             </button>
         </div>
         
-        <p>
+        <p class="form-shelter-cutaway__name">
             Заявка
         </p>
      
-        <p>
+        <p class="form-shelter__text">
             Отправьте нам заявку о том, что готовы помочь. Когда нам будет<br>
             необходима помощь, мы позвоним вам.
         </p>
 
-        <div>
+        <div class="form-shelter__box-input">
             <!-- <label for="name">Фамилия и имя</label> -->
             <input type="text" id="name" name="username" placeholder="Фамилия и имя" minlength="2" maxlength="56" pattern="[А-Яа-яЁё\s|a-zA-Z\s]{2,56}">
             
@@ -33,17 +34,16 @@
             <label for="phone">Обязательное поле для заполнения</label>
         </div>
 
-        <div>
+        <div class="form-volunteering-radio">
             <label><input type="radio" id="volunteering" value="volunteering" name="volunteering" checked>Хочу помогать на постоянной основе (расписание<br>можно подобрать так, как будет удобно для всех)</label>
             <label><input type="radio" id="volunteering" value="volunteering" name="volunteering">Готов помогать иногда. Хочу выбрать удобное для меня<br>время</label>
         </div>
 
-        <textarea name="usercomment" id="comment" cols="22" rows="3" placeholder="Замечания" maxlength="500"></textarea>
+        <textarea class="form-shelter__textarea" name="usercomment" id="comment" cols="22" rows="3" placeholder="Замечания" maxlength="500"></textarea>
 
-        <div>
-            <button type="submit"><span>Отправить заявку</span></button>
-            <button><span>Отмена</span></button>
+        <div class="form-shelter__box-button">
+            <button class="form-shelter__button-submit" type="submit"><span>Отправить заявку</span></button>
+            <button class="form-shelter__button-cancel"><span>Отмена</span></button>
         </div>
-
     </form>
 </body>
