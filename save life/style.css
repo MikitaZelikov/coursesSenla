@@ -5,8 +5,8 @@
     font-style: normal;
     font-weight: 700;
     src: local(''),
-         url(./fonts/Gilroy-Bold.woff) format('woff'),
-         url(./fonts/gilroy-bold.woff2) format('woff2');
+         url(./assets/fonts/Gilroy-Bold.woff) format('woff'),
+         url(./assets/fonts/gilroy-bold.woff2) format('woff2');
 }
 
 @font-face {
@@ -14,8 +14,8 @@
     font-style: normal;
     font-weight: 600;
     src: local(''),
-         url(./fonts/Gilroy-SemiBold.woff) format('woff'),
-         url(./fonts/gilroy-semibold.woff2) format('woff2');
+         url(./assets/fonts/Gilroy-SemiBold.woff) format('woff'),
+         url(./assets/fonts/gilroy-semibold.woff2) format('woff2');
 }
 
 @font-face {
@@ -23,8 +23,8 @@
     font-style: normal;
     font-weight: 500;
     src: local(''),
-         url(./fonts/Gilroy-Medium.woff) format('woff'),
-         url(./fonts/gilroy-medium.woff2) format('woff2');
+         url(./assets/fonts/Gilroy-Medium.woff) format('woff'),
+         url(./assets/fonts/gilroy-medium.woff2) format('woff2');
 }
 
 @font-face {
@@ -32,8 +32,8 @@
     font-style: normal;
     font-weight: 400;
     src: local(''),
-         url(./fonts/Gilroy-Regular.woff) format('woff'),
-         url(./fonts/gilroy-regular.woff2) format('woff2');
+         url(./assets/fonts/Gilroy-Regular.woff) format('woff'),
+         url(./assets/fonts/gilroy-regular.woff2) format('woff2');
 }
 
 @font-face {
@@ -41,8 +41,8 @@
     font-style: normal;
     font-weight: 300;
     src: local(''),
-         url(./fonts/Gilroy-Light.woff) format('woff'),
-         url(./fonts/Gilroy-Light.woff2) format('woff2');
+         url(./assets/fonts/Gilroy-Light.woff) format('woff'),
+         url(./assets/fonts/Gilroy-Light.woff2) format('woff2');
 }
 
 /* Color background blocks */
