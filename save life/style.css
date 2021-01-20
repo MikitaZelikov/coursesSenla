@@ -1,0 +1,495 @@
+/* Local fonts */
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url(./fonts/Gilroy-Bold.woff) format('woff'),
+         url(./fonts/gilroy-bold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url(./fonts/Gilroy-SemiBold.woff) format('woff'),
+         url(./fonts/gilroy-semibold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url(./fonts/Gilroy-Medium.woff) format('woff'),
+         url(./fonts/gilroy-medium.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url(./fonts/Gilroy-Regular.woff) format('woff'),
+         url(./fonts/gilroy-regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+         url(./fonts/Gilroy-Light.woff) format('woff'),
+         url(./fonts/Gilroy-Light.woff2) format('woff2');
+}
+
+/* Color background blocks */
+
+body {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: normal;
+    color: #242424;
+    width: 100vw;
+    background: #F6F6F6;
+}
+
+.hearts-wrapper,
+.charity-wrapper,
+.news-wrapper {
+    background: #FFFFFF;
+}
+
+.pets__card {
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Icon, image, logo */
+
+.options-help__icon {
+    width: 150px;
+    height: 150px;
+}
+
+.options-help__icon_1 {
+    background: url('./assets/icon/Group\ 9.svg');
+}
+
+.options-help__icon_2 {
+    background: url('./assets/icon/Group\ 15.svg');
+}
+
+.options-help__icon_3 {
+    background: url('./assets/icon/Group\ 14.svg');
+}
+
+.options-help__icon_4 {
+    background: url('./assets/icon/Group\ 10.svg');
+}
+
+.options-help__icon_5 {
+    background: url('./assets/icon/Group\ 13.svg');
+}
+
+.head__background {
+    background: url('./assets/image/dog\ 1.jpg');
+    width: 718px;
+    height: 713px;
+}
+
+.head__sticker {
+    background: url('./assets/image/cat\ 1.png');
+    width: 483px;
+    height: 469px;
+}
+
+.banner__icon-conteiner_icon1 {
+    background: url('./assets/icon/Group\ 1.svg');
+    width: 148.41px;
+    height: 144.38px;
+}
+
+.banner__icon-conteiner_icon2 {
+    background: url('./assets/icon/Group\ 2.svg');
+    width: 131px;
+    height: 93px;
+}
+
+.banner__icon-conteiner_icon3 {
+    background: url('./assets/icon/Group\ 3.svg');
+    width: 127px;
+    height: 100px;
+}
+
+.banner__icon-conteiner_icon4 {
+    background: url('./assets/icon/Group\ 4.svg');
+    width: 118px;
+    height: 115px;
+}
+
+.banner__icon-conteiner_icon5 {
+    background: url('./assets/icon/Group\ 5.svg');
+    width: 82px;
+    height: 110px;
+}
+
+.volunteering-sticker {
+    background: url('./assets/image/Ellipse\ 27.png');
+    width: 464px;
+    height: 464px;
+}
+
+.thanks-wrapper {
+    background: url('./assets/image/36164\ 1.jpg');
+    width: 1366px;
+    height: 741px;
+}
+
+.thanks-conteiner__icon {
+    background: url('./assets/icon/foundation_paw.svg');
+    width: 89px;
+    height: 89px;
+}
+
+/* Text styles */
+
+p, 
+.charity-info__item,
+.essentials-article__item {
+    line-height: 140%;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 4.5rem;
+    line-height: 120%;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 86%;
+}
+
+.header-nav__link {
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.major-description__goal {
+    font-weight: 600;
+    line-height: 140%;
+    color: #474747;
+}
+
+.head__text {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 121%;
+    color: #C78100;
+}
+
+.head-button__text,
+.button-payment__text,
+.button-card__text,
+.button-autohelp__text,
+.button-volunteering__text,
+.form-shelter__button-submit,
+.form-shelter__button-cancel {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 200%;
+    color: #000000;
+}
+
+.review-pets__text {
+    color: #AD7F00;
+    text-decoration-line: underline;
+}
+
+.button-card__text_color,
+.button-autohelp__text_color,
+.button-volunteering__text_color {
+    color: #242424;
+}
+
+.options-help__title, .pets__title, .charity-info__title {
+    font-weight: 300;
+}
+
+.hearts-conteiner-article__title {
+    line-height: 120%;
+    color: #C78100;
+}
+
+.major-description__organization {
+    font-weight: 300;
+    line-height: 112.5%;
+    color: #6B6B6B;
+}
+
+.options-help__text {
+    font-weight: 500;
+    line-height: 140%;
+    color: #474747;
+}
+
+.pets-card__text,
+.form-shelter-cutaway__sex-age,
+.form-shelter__name-input,
+input, textarea, .form-autohelp-checkbox__title,
+#pets {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 143%;
+}
+
+.pets-card__text_name,
+.form-shelter-cutaway__name {
+    font-weight: 500;
+    font-size: 1.375rem;
+    line-height: 91%;
+}
+
+.pets-card__text_sex-age, 
+.charity-conteiner__text,
+.form-shelter-cutaway__sex-age,
+.form-shelter__text,
+.about-information-text-socials {
+    color: #6B6B6B;
+}
+
+.pets-social-networks__text, 
+.charity-conteiner__text,
+.about-information__text {
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 133%;
+}
+
+.about-information__text, 
+.charity-conteiner__text {
+    font-weight: 500;
+}
+
+.charity-info__list,
+.essentials-article__list {
+    margin-block-start: initial;
+    margin-block-end: initial;
+    padding-inline-start: 15px;
+}
+
+.about-information__title {
+    font-size: 1.375rem;
+    line-height: 118%;
+}
+
+.thanks-conteiner__text {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.footer__text {
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 121%;
+    color: #242424;
+}
+
+.footer__list {
+    list-style-type: none;
+}
+
+.footer__text_normal {
+    font-weight: normal;
+}
+
+.footer__copyright {
+    font-size: 0.75rem;
+    line-height: 140%;
+    color: #B3B3B3;   
+}
+
+.all-pets-head__title {
+    line-height: 120%;
+}
+
+.all-pets-head__link,
+.selection-form__title {
+    color: #6B6B6B;
+    text-decoration: none;
+}
+
+.all-pets-head__link_text {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 100%;
+}
+
+.form-shelter-head__title,
+.form-shelter__text_color {
+    color: #B3B3B3;   
+}
+
+/* Blocks markup */
+
+.header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.86vw;
+    background-color: lightcoral;
+}
+
+.head__major-description {
+    margin-top: 12vw;
+}
+
+.pets__catalog {
+    margin: 0 auto;
+    display: grid;
+    width: 83.9vw;
+    grid-template-areas: 
+    "a b c"
+    "d e f";
+    column-gap: 21px;
+    row-gap: 44px;
+}
+
+.all-pets__conteiner {
+    margin: 0 auto;
+    display: grid;
+    width: 83.9vw;
+    grid-template-areas: 
+    "a b c"
+    "d e f"
+    "g h i"
+    "j k l";
+    column-gap: 21px;
+    row-gap: 44px;
+}
+
+.pets__card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.button-card-conteiner,
+.pets-card__text_name {
+    text-align: center;
+}
+
+.form-shelter__head {
+    border-bottom: solid 1px #EEBF3A;
+}
+
+/* Buttons styles */
+
+.head__button,
+.button-card,
+.button-payment,
+.button-autohelp,
+.button-volunteering {
+    background: #FBC832;
+    border-radius: 58px;
+    height: 42px;
+    width: 223px;
+    border: none;
+}
+
+.head__button_size {
+    width: 182px;
+}
+
+.button-card_yellow {
+    width: 209px;
+}
+.button-card_transparent {
+    background: transparent;
+    border: 2px solid #FFC41E;
+    width: 296px;
+    margin: 20px auto;
+}
+
+.button-payment__link,
+.head-button__link {
+    text-decoration-line: none;
+}
+
+.form-shelter-head__button {
+    background: url('./assets/icon/close.svg');
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    border: none;
+}
+
+.form-shelter__button-submit {
+    background: #FFE28E;
+    border-radius: 58px;
+    height: 42px;
+    width: 168px;
+    border: none;
+    color: #6B6B6B;
+}
+
+.form-shelter__button-submit_autohelp,
+.form-shelter__button-submit_volunteering {
+    width: 234px;
+}
+
+.form-shelter__button-cancel {
+    background: transparent;
+    border-radius: 58px;
+    height: 42px;
+    width: 143px;
+    border: 2px solid #FFC41E;
+    color: #242424;
+}
+
+
+/* form style */
+
+input, textarea {
+    border: 1px solid #D6D6D6;
+    border-radius: 2px;
+    color: #6B6B6B;
+    opacity: 0.7;
+}
+
+label {
+    font-size: 0.875rem;
+    line-height: 140%;
+    color: #B3B3B3;
+}
+
+.form-autohelp-checkbox__label-item {
+    color: #6B6B6B;
+}
+
+.form-shelter__contacts {
+    font-size: 0.875rem;
+    color: #474747;
+}
+
+.label-input-top {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 143%;
+    color: #474747;
+    opacity: 0.7;
+}
+
+.form-autohelp-checkbox__list {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+

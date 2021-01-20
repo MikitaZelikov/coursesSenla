@@ -28,10 +28,14 @@
         </p>
 
         <div class="form-shelter__box-input">
-            <!-- <label for="name">Фамилия и имя</label> -->
-            <input type="text" id="name" name="username" placeholder="Фамилия и имя" minlength="2" maxlength="56" pattern="[А-Яа-яЁё\s|a-zA-Z\s]{2,56}">
-            
-            <input type="tel" id="phone" name="usernumber" placeholder="Номер телефона" pattern="\d{9}" maxlength="9" required>
+            <label class="label-input-top" for="name">Фамилия и имя</label>
+            <br>
+            <input class="input-text" type="text" id="name" name="username" placeholder="Введите ваше имя и фамилию" minlength="2" maxlength="56" pattern="[А-Яа-яЁё\s|a-zA-Z\s]{2,56}">
+            <br>
+            <label class="label-input-top" for="phone">Номер телефона (только белорусский номер)</label>
+            <br>
+            <input class="input-tel" type="tel" id="phone" name="usernumber" placeholder="Введите ваш номер телефона" pattern="\d{9}" maxlength="9" required>
+            <br>
             <label for="phone">Обязательное поле для заполнения</label>
         </div>
 
@@ -55,17 +59,29 @@
 
         <div class="form-autohelp-checkbox">
             <p class="form-autohelp-checkbox__title">Выберите вид автопомощи</p>
-            <label><input type="checkbox" id="autohelp" value="autohelp" name="autohelp">Доставка еды, медикаментов и других небольших вещей</label>
-            <label><input type="checkbox" id="autohelp" value="autohelp" name="autohelp">Доставка сена или соломы, строительных материлов<br>для будок и других крупногабаритных вещей</label>
-            <label><input type="checkbox" id="autohelp" value="autohelp" name="autohelp">Транспортировка небольших собак и котов</label>
-            <label><input type="checkbox" id="autohelp" value="autohelp" name="autohelp">Транспортировка больших собак</label>
+            <ul class="form-autohelp-checkbox__list">
+                <li>
+                    <label class="form-autohelp-checkbox__label-item"><input type="checkbox" id="autohelp" value="autohelp" name="autohelp">  Доставка еды, медикаментов и других небольших вещей</label>
+                </li>
+                <li>
+                    <label class="form-autohelp-checkbox__label-item"><input type="checkbox" id="autohelp" value="autohelp" name="autohelp">  Доставка сена или соломы, строительных материлов<br>для будок и других крупногабаритных вещей</label>
+                </li>
+                <li>
+                    <label class="form-autohelp-checkbox__label-item"><input type="checkbox" id="autohelp" value="autohelp" name="autohelp">  Транспортировка небольших собак и котов</label>
+                </li>
+                <li>
+                    <label class="form-autohelp-checkbox__label-item"><input type="checkbox" id="autohelp" value="autohelp" name="autohelp">  Транспортировка больших собак</label>
+                </li>
+            </ul>
         </div>
 
-        <textarea class="form-shelter__textarea" name="usercomment" id="comment" cols="25" rows="3" placeholder="Замечания" maxlength="500"></textarea>
+        <label class="label-input-top" for="comment">Замечания</label>
+        <br>
+        <textarea name="usercomment" id="comment" cols="25" rows="3" placeholder="Опишите, как вы сможете нам помочь и удобное время для вас" maxlength="500"></textarea>
 
         <div class="form-shelter__box-button">
-            <button class="form-shelter__button-submit" type="submit"><span>Отправить заявку</span></button>
-            <button class="form-shelter__button-cancel"><span>Отмена</span></button>
+            <button class="form-shelter__button-submit form-shelter__button-submit_autohelp" type="submit">Отправить заявку</button>
+            <button class="form-shelter__button-cancel">Отмена</button>
         </div>
 
     </form>

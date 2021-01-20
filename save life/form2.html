@@ -18,7 +18,7 @@
         </div>
         
         <figure class="form-shelter__cutaway form-shelter-cutaway">
-            <img src="" alt="">
+            <img src="./assets/image/Form dog.png" alt="палевый щенок с висячими ушами">
             <figcaption>
                 <p class="form-shelter-cutaway__name">Моник</p>
                 <p class="form-shelter-cutaway__sex-age">Мальчик, 7 месяцев</p>
@@ -26,19 +26,26 @@
         </figure>
      
         <p class="form-shelter__text">
-            Оставьте информацию о себе. Мы позвоним вам и договоримся, когда вы сможете забрать себе питомца на передержку.
-        </p>
+            Оставьте информацию о себе. Мы позвоним вам и<br>
+            договоримся, когда вы сможете забрать себе<br>
+            питомца.        </p>
 
         <div class="form-shelter__box-input">
-            <!-- <label for="name">Фамилия и имя</label> -->
-            <input type="text" id="name" name="username" placeholder="Фамилия и имя" minlength="2" maxlength="56" pattern="[А-Яа-яЁё\s|a-zA-Z\s]{2,56}">
-            
-            <input type="tel" id="phone" name="usernumber" placeholder="Номер телефона" pattern="\d{9}" maxlength="9" required>
+            <label class="label-input-top" for="name">Фамилия и имя</label>
+            <br>
+            <input class="input-text" type="text" id="name" name="username" placeholder="Введите ваше имя и фамилию" minlength="2" maxlength="56" pattern="[А-Яа-яЁё\s|a-zA-Z\s]{2,56}">
+            <br>
+            <label class="label-input-top" for="phone">Номер телефона (только белорусский номер)</label>
+            <br>
+            <input class="input-tel" type="tel" id="phone" name="usernumber" placeholder="Введите ваш номер телефона" pattern="\d{9}" maxlength="9" required>
+            <br>
             <label for="phone">Обязательное поле для заполнения</label>
         </div>
 
-        <textarea class="form-shelter__textarea" name="usercomment" id="comment" cols="25" rows="3" placeholder="Замечания" maxlength="500"></textarea>
-
+        <label class="label-input-top" for="comment">Замечания</label>
+        <br>
+        <textarea name="usercomment" id="comment" cols="25" rows="3" placeholder="Опишите, на какой срок вы смогли бы взять питомца на передержку" maxlength="500"></textarea>
+        
         <p class="form-shelter__contacts">
             Если у вас есть вопросы, можете позвонить нам:<br>
             +375 (33) 6237879  Лена<br>
@@ -53,8 +60,8 @@
         </p>
 
         <div class="form-shelter__box-button">
-            <button class="form-shelter__button-submit" type="submit"><span>Отправить</span></button>
-            <button class="form-shelter__button-cancel"><span>Отмена</span></button>
+            <button class="form-shelter__button-submit" type="submit">Отправить</button>
+            <button class="form-shelter__button-cancel">Отмена</button>
         </div>
 
     </form>
