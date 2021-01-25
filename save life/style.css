@@ -96,16 +96,79 @@ body {
     background: url('./assets/icon/Group\ 13.svg');
 }
 
-.head__background {
+.header-conteiner::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
     background: url('./assets/image/dog\ 1.jpg');
     width: 718px;
     height: 713px;
+    top: 0;
+    right: 0;
 }
 
-.head__sticker {
+.head::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
     background: url('./assets/image/cat\ 1.png');
     width: 483px;
     height: 469px;
+    top: 330px;
+    right: 166px;
+}
+
+.head__watermark_1 {
+    background: url('./assets/image/Я\ буду.png');
+    width: 599px;
+    height: 192px;
+    left: -110px;
+    top: 225px;
+}
+
+.head__watermark_2 {
+    background: url('./assets/image/лучшим.png');
+    width: 534px;
+    height: 107px;
+    left: -110px;
+}
+
+.head__watermark_3 {
+    background: url('./assets/image/другом.png');
+    width: 474px;
+    height: 107px;
+    left: 186px;
+    top: 530px;
+}
+
+.hearts-figure__block {
+    position: relative;
+    height: 514px;
+    width: 25.1vw;
+    background-color: #FFC41E;
+
+}
+
+.hearts-figure__sticker1 {
+    position: absolute;
+    background: url('./assets/image/Ellipse\ 25.png');
+    width: 464px;
+    height: 464px;
+    border: solid #FFC41E 25px;
+    border-radius: 257px;
+    top: 0;
+    right: -257px;
+}
+
+.hearts-figure__sticker2 {
+    position: absolute;
+    background: url('./assets/image/Ellipse\ 39.png');
+    width: 228px;
+    height: 228px;
+    border: solid #FFC41E 8px;
+    border-radius: 122px;
+    bottom: -20px;
+    right: -284px;
 }
 
 .banner__icon-conteiner_icon1 {
@@ -179,6 +242,8 @@ h2 {
 .header-nav__link {
     font-weight: 600;
     line-height: 120%;
+    text-decoration: none;
+    color: #242424;
 }
 
 .major-description__goal {
@@ -192,6 +257,8 @@ h2 {
     font-size: 1.5rem;
     line-height: 121%;
     color: #C78100;
+    margin-block-start: 2em;
+    margin-block-end: 2em;
 }
 
 .head-button__text,
@@ -225,6 +292,7 @@ h2 {
 .hearts-conteiner-article__title {
     line-height: 120%;
     color: #C78100;
+    text-align: center;
 }
 
 .major-description__organization {
@@ -340,16 +408,77 @@ input, textarea, .form-autohelp-checkbox__title,
 
 /* Blocks markup */
 
-.header {
-    position: absolute;
+/* .header {
+    background-color: #47474765;
+} */
+
+.header-conteiner {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    margin-top: 2.86vw;
-    background-color: lightcoral;
+    max-width: 1146px;
+    margin: 0 auto;
+    padding-top: 39px;
 }
 
-.head__major-description {
-    margin-top: 12vw;
+.header__socials {
+    margin-right: 8.46%;
+    width: 126px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 55.4%;
+}
+
+.header-nav__list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.header-nav__item_indent {
+    margin-right: 32px;
+}
+
+.head {
+    max-width: 1146px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 670px;
+}
+
+.major-description__title {
+    margin-block-end: 0;
+}
+
+.major-description__organization {
+    margin-block-start: 0;
+}
+
+.head__watermark {
+    position: absolute;
+    z-index: -1;    
+}
+
+.hearts-conteiner {
+    display: flex;
+    align-items: center;
+    max-width: 1160px;
+}
+
+.hearts__figure {
+    min-height: 534px;
+    margin: 4.7% 0;
+}
+
+.hearts-conteiner__article {
+    min-width: 40.2%;
+    margin-left: 350px;
 }
 
 .pets__catalog {
@@ -407,6 +536,7 @@ input, textarea, .form-autohelp-checkbox__title,
 
 .head__button_size {
     width: 182px;
+    text-align: center;
 }
 
 .button-card_yellow {

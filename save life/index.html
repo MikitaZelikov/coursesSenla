@@ -9,26 +9,39 @@
 </head>
 <body>
     <header class="header">
-        <nav class="header__nav header-nav">
-            <ul class="header-nav__list">
-                <li class="header-nav__item"><a class="header-nav__link" href="#">Как помочь</a></li>
-                <li class="header-nav__item"><a class="header-nav__link" href="#">Подопечные животные</a></li>
-            </ul>
-            <ul class="header-nav__list">
-                <li class="header-nav__item"><a class="header-nav__link" href="#">О нас</a></li>
-                <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="header__socials header-socials">
-            <a href="" class="header-socials__link header-socials__link_vk_color1 visually-hidden">VK</a>
-            <a href="" class="header-socials__link header-socials__link_instagram_color1 visually-hidden">Instagram</a>
-        </div>
+        <div class="header-conteiner">
+            <nav class="header__nav header-nav">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item header-nav__item_indent"><a class="header-nav__link" href="#">Как помочь</a></li>
+                    <li class="header-nav__item"><a class="header-nav__link" href="#">Подопечные животные</a></li>
+                </ul>
+                <ul class="header-nav__list">
+                    <li class="header-nav__item header-nav__item_indent"><a class="header-nav__link" href="#">О нас</a></li>
+                    <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__socials header-socials">
+                <a href="" class="header-socials__link header-socials__link_vk_color1 visually-hidden">
+                    <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24.5" cy="24.5" r="23.5" stroke="white" stroke-width="2"/>
+                        <path d="M38.3123 19.219C38.5219 18.5157 38.3123 18 37.3212 18H34.038C33.2026 18 32.8208 18.4461 32.6112 18.9361C32.6112 18.9361 30.9419 23.0482 28.5765 25.7145C27.813 26.4903 27.4641 26.7353 27.0479 26.7353C26.8398 26.7353 26.5374 26.4903 26.5374 25.7871V19.219C26.5374 18.3751 26.2964 18 25.6002 18H20.4411C19.9201 18 19.6057 18.3902 19.6057 18.7622C19.6057 19.5607 20.7885 19.7453 20.9097 21.9956V26.8775C20.9097 27.9467 20.7196 28.1418 20.3004 28.1418C19.188 28.1418 16.4812 24.0146 14.8748 19.29C14.5619 18.372 14.246 18.0015 13.4076 18.0015H10.126C9.18726 18.0015 9.00012 18.4477 9.00012 18.9377C9.00012 19.8178 10.1125 24.1734 14.1817 29.934C16.8944 33.8676 20.7136 36 24.1929 36C26.2784 36 26.5359 35.5266 26.5359 34.71V31.7367C26.5359 30.79 26.735 30.5994 27.3953 30.5994C27.8803 30.5994 28.7157 30.8474 30.6635 32.7424C32.8882 34.9897 33.2565 35.9985 34.5066 35.9985H37.7883C38.7255 35.9985 39.1941 35.5251 38.9246 34.5905C38.6297 33.6604 37.5667 32.3068 36.1564 30.7053C35.3899 29.7918 34.2446 28.8088 33.8958 28.3173C33.4092 27.6836 33.5499 27.4038 33.8958 26.8412C33.8973 26.8427 37.8961 21.1533 38.3123 19.219Z" fill="white"/>
+                        </svg>
+                </a>
+                <a href="" class="header-socials__link header-socials__link_instagram_color1 visually-hidden">
+                    <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24.5" cy="24.5" r="23.5" stroke="white" stroke-width="2"/>
+                        <path d="M24.4964 19.9981C22.0175 19.9981 19.9945 22.0211 19.9945 24.5C19.9945 26.9789 22.0175 29.0019 24.4964 29.0019C26.9752 29.0019 28.9982 26.9789 28.9982 24.5C28.9982 22.0211 26.9752 19.9981 24.4964 19.9981ZM37.9985 24.5C37.9985 22.6357 38.0154 20.7884 37.9107 18.9275C37.806 16.766 37.3129 14.8477 35.7324 13.2672C34.1485 11.6832 32.2336 11.1935 30.0722 11.0888C28.2079 10.9841 26.3606 11.001 24.4997 11.001C22.6355 11.001 20.7882 10.9841 18.9273 11.0888C16.7659 11.1935 14.8477 11.6866 13.2671 13.2672C11.6832 14.8511 11.1935 16.766 11.0888 18.9275C10.9841 20.7917 11.001 22.6391 11.001 24.5C11.001 26.3609 10.9841 28.2116 11.0888 30.0725C11.1935 32.234 11.6866 34.1523 13.2671 35.7328C14.851 37.3168 16.7659 37.8065 18.9273 37.9112C20.7916 38.0159 22.6389 37.999 24.4997 37.999C26.364 37.999 28.2113 38.0159 30.0722 37.9112C32.2336 37.8065 34.1518 37.3134 35.7324 35.7328C37.3163 34.1489 37.806 32.234 37.9107 30.0725C38.0188 28.2116 37.9985 26.3643 37.9985 24.5ZM24.4964 31.4268C20.6632 31.4268 17.5697 28.3332 17.5697 24.5C17.5697 20.6668 20.6632 17.5732 24.4964 17.5732C28.3295 17.5732 31.423 20.6668 31.423 24.5C31.423 28.3332 28.3295 31.4268 24.4964 31.4268ZM31.7067 18.9072C30.8118 18.9072 30.089 18.1845 30.089 17.2895C30.089 16.3945 30.8118 15.6718 31.7067 15.6718C32.6017 15.6718 33.3244 16.3945 33.3244 17.2895C33.3247 17.502 33.283 17.7125 33.2018 17.9089C33.1206 18.1053 33.0015 18.2837 32.8512 18.434C32.7009 18.5843 32.5225 18.7034 32.3261 18.7846C32.1297 18.8658 31.9192 18.9075 31.7067 18.9072Z" fill="white"/>
+                        </svg>    
+                </a>
+            </div>
+        </div>  
     </header>
     <main class="main">
         <article class="head">
             <div class="head__major-description major-description">
                 <h1 class="major-description__title">СПАСИ ЖИЗНЬ</h1>
-                <p class="major-description__organization">Благотворительное общественное объединение защиты животных</p>
+                <p class="major-description__organization">
+                    Благотворительное общественное объединение защиты животных</p>
                 <p class="major-description__goal"> 
                     Наша цель: помощь бездомным животным. Также мы поддерживаем хвостиков,<br>
                     которые оказались в пункте отлова и временного содержания в Гродно.
@@ -45,12 +58,18 @@
                     <span class="head-button__text">Хочу помочь</span>
                 </a>
             </div>     
-            <div class="head__background"></div>
-            <div class="head__sticker"></div>
+            <div class="head__watermark head__watermark_1"></div>
+            <div class="head__watermark head__watermark_2"></div>
+            <div class="head__watermark head__watermark_3"></div>
         </article>
         <div class="hearts-wrapper">
             <section class="hearts-conteiner">
-                <div class="hearts-conteiner__sticker"></div>
+                <div class="hearts__figure hearts-figure">
+                    <div class="hearts-figure__block">
+                        <div class="hearts-figure__sticker1"></div>
+                        <div class="hearts-figure__sticker2"></div>
+                    </div>
+                </div>
                 <div class="hearts-conteiner__article hearts-conteiner-article">
                     <h2 class="hearts-conteiner-article__title">
                         Тут большие добрые сердца<br>
@@ -58,18 +77,18 @@
                         сердечкам
                     </h2>
                     <p class="hearts-conteiner-article__text">
-                        Ежедневно в пункт временного содержания, путём отлова,<br>
-                        попадают безнадзорные собаки и коты. По закону, у<br>
-                        животных находящихся в САХе есть всего лишь несколько<br>
-                        дней, чтобы найти прежнего или обрести нового хозяина. В<br>
-                        противном случае невостребованных животных ждёт<br>
-                        УСЫПЛЕНИЕ! Здесь вы сможете найти своего как<br>
+                        Ежедневно в пункт временного содержания, путём отлова,
+                        попадают безнадзорные собаки и коты. По закону, у
+                        животных находящихся в САХе есть всего лишь несколько
+                        дней, чтобы найти прежнего или обрести нового хозяина. В
+                        противном случае невостребованных животных ждёт
+                        УСЫПЛЕНИЕ! Здесь вы сможете найти своего как
                         потерявшегося, так и нового верного друга! 
                     </p>
                     <p class="hearts-conteiner-article__text">
-                        Если нет возможности забрать хвостика, вы можете помочь<br>
-                        нам финансово или другой материальной помощью. Еще нам<br>
-                        всегда нужны добрые и отзывчивые люди - волонтеры, без<br>
+                        Если нет возможности забрать хвостика, вы можете помочь
+                        нам финансово или другой материальной помощью. Еще нам
+                        всегда нужны добрые и отзывчивые люди - волонтеры, без
                         вас очень трудно!
                     </p>
                 </div>
