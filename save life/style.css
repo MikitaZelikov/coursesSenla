@@ -171,31 +171,31 @@ body {
     right: -284px;
 }
 
-.banner__icon-conteiner_icon1 {
+.banner__icon_type1 {
     background: url('./assets/icon/Group\ 1.svg');
     width: 148.41px;
     height: 144.38px;
 }
 
-.banner__icon-conteiner_icon2 {
+.banner__icon_type2 {
     background: url('./assets/icon/Group\ 2.svg');
     width: 131px;
     height: 93px;
 }
 
-.banner__icon-conteiner_icon3 {
+.banner__icon_type3 {
     background: url('./assets/icon/Group\ 3.svg');
     width: 127px;
     height: 100px;
 }
 
-.banner__icon-conteiner_icon4 {
+.banner__icon_type4 {
     background: url('./assets/icon/Group\ 4.svg');
     width: 118px;
     height: 115px;
 }
 
-.banner__icon-conteiner_icon5 {
+.banner__icon_type5 {
     background: url('./assets/icon/Group\ 5.svg');
     width: 82px;
     height: 110px;
@@ -285,8 +285,11 @@ h2 {
     color: #242424;
 }
 
-.options-help__title, .pets__title, .charity-info__title {
+.options-help__title, 
+.pets__title, 
+.charity-info__title {
     font-weight: 300;
+    text-align: center;
 }
 
 .hearts-conteiner-article__title {
@@ -305,6 +308,7 @@ h2 {
     font-weight: 500;
     line-height: 140%;
     color: #474747;
+    text-align: center;
 }
 
 .pets-card__text,
@@ -481,10 +485,56 @@ input, textarea, .form-autohelp-checkbox__title,
     margin-left: 350px;
 }
 
+.options-help {
+    display: flex;
+    flex-direction: column;
+    margin: 80px auto;
+}
+
+.options-help__conteiner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.options-help__item {
+    max-width: 166px;
+    margin: 40px;
+}
+
+.options-help__link {
+    text-decoration: none;
+}
+
+.options-help__icon {
+    margin: 0 auto;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner__line {
+    border: none;
+    background-color: #EEBF3A;
+    height: 1px;
+    width: calc(50vw - 100px);
+    margin: 0;
+}
+
+.shelter {
+    display: flex;
+    justify-content: center;
+    column-gap: 97px;
+    margin: 72px auto;
+}
+
 .pets__catalog {
     margin: 0 auto;
     display: grid;
-    width: 83.9vw;
+    max-width: 1143px;
     grid-template-areas: 
     "a b c"
     "d e f";
@@ -509,6 +559,12 @@ input, textarea, .form-autohelp-checkbox__title,
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    padding: 16px;
+}
+
+.pets__card figure {
+    margin-block: 0;
+    margin-inline: 0;
 }
 
 .button-card-conteiner,
@@ -546,7 +602,7 @@ input, textarea, .form-autohelp-checkbox__title,
     background: transparent;
     border: 2px solid #FFC41E;
     width: 296px;
-    margin: 20px auto;
+    margin: 20px auto 4px;
 }
 
 .button-payment__link,
