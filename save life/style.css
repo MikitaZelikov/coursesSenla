@@ -141,36 +141,6 @@ body {
     top: 530px;
 }
 
-.hearts-figure__block {
-    position: relative;
-    height: 514px;
-    width: 25.1vw;
-    background-color: #FFC41E;
-
-}
-
-.hearts-figure__sticker1 {
-    position: absolute;
-    background: url('./assets/image/Ellipse\ 25.png');
-    width: 464px;
-    height: 464px;
-    border: solid #FFC41E 25px;
-    border-radius: 257px;
-    top: 0;
-    right: -257px;
-}
-
-.hearts-figure__sticker2 {
-    position: absolute;
-    background: url('./assets/image/Ellipse\ 39.png');
-    width: 228px;
-    height: 228px;
-    border: solid #FFC41E 8px;
-    border-radius: 122px;
-    bottom: -20px;
-    right: -284px;
-}
-
 .banner__icon_type1 {
     background: url('./assets/icon/Group\ 1.svg');
     width: 148.41px;
@@ -180,7 +150,7 @@ body {
 .banner__icon_type2 {
     background: url('./assets/icon/Group\ 2.svg');
     width: 131px;
-    height: 93px;
+    height: 95px;
 }
 
 .banner__icon_type3 {
@@ -199,12 +169,6 @@ body {
     background: url('./assets/icon/Group\ 5.svg');
     width: 82px;
     height: 110px;
-}
-
-.volunteering-sticker {
-    background: url('./assets/image/Ellipse\ 27.png');
-    width: 464px;
-    height: 464px;
 }
 
 .thanks-wrapper {
@@ -289,7 +253,6 @@ h2 {
 .pets__title, 
 .charity-info__title {
     font-weight: 300;
-    text-align: center;
 }
 
 .hearts-conteiner-article__title {
@@ -471,35 +434,85 @@ input, textarea, .form-autohelp-checkbox__title,
 
 .hearts-conteiner {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    max-width: 1160px;
+    max-width: 1081px;
+    margin: 0 auto;
+    padding: 55px 150px 75px 21px;
 }
 
 .hearts__figure {
-    min-height: 534px;
-    margin: 4.7% 0;
+    width: 48%;
+    position: relative;
+}
+
+.hearts__figure::before {
+    content: '';
+    position: absolute;
+    background-color: #FFC41E;
+    right: 50%;
+    width: 50vw;
+    top: 0;
+    bottom: 0;
+}
+
+.hearts-figure__sticker1 {
+    position: relative;
+    background: url('./assets/image/Ellipse\ 25.png');
+    background-size: cover;
+    border: solid #FFC41E 25px;
+    border-radius: 50%;
+}
+
+.hearts-figure__sticker1::after {
+    content: '';  
+    display: block;
+    padding-bottom: 100%;
+    height: 0;
+}
+
+.hearts-figure__sticker2 {
+    position: absolute;
+    background: url('./assets/image/Ellipse\ 39.png');
+    background-size: cover;
+    border: solid #FFC41E 8px;
+    border-radius: 50%;
+    bottom: -5%;
+    right: -5%;
+    width: 44%;
+}
+
+.hearts-figure__sticker2::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+    height: 0;
 }
 
 .hearts-conteiner__article {
-    min-width: 40.2%;
-    margin-left: 350px;
-}
-
-.options-help {
-    display: flex;
-    flex-direction: column;
-    margin: 80px auto;
+    width: 43%;
 }
 
 .options-help__conteiner {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1146px;
+    padding-top: 56px;
+    padding-bottom: 64px;
+    align-items: center;
+}
+
+.options-help__box {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
     flex-wrap: wrap;
+    margin-top: 23px;
 }
 
 .options-help__item {
-    max-width: 166px;
-    margin: 40px;
+    flex-basis: 14%;
 }
 
 .options-help__link {
@@ -524,11 +537,22 @@ input, textarea, .form-autohelp-checkbox__title,
     margin: 0;
 }
 
-.shelter {
+.shelter__conteiner {
     display: flex;
-    justify-content: center;
-    column-gap: 97px;
-    margin: 72px auto;
+    justify-content: space-between;
+    max-width: 875px;
+    margin: 0 auto;
+    padding: 48px 50px 56px 125px;
+}
+
+.shelter__article {
+    max-width: 45%;
+}
+
+.pets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pets__catalog {
@@ -568,8 +592,117 @@ input, textarea, .form-autohelp-checkbox__title,
 }
 
 .button-card-conteiner,
-.pets-card__text_name {
+.pets-card__text_name,
+.charity-conteiner__title,
+.charity-conteiner__text {
     text-align: center;
+}
+
+.pets-social-networks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 55px 57px 55px 50px;
+}
+
+.pets-social-networks__icons {
+    width: 126px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.charity-wrapper {
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.charity-conteiner {
+    max-width: 875px;
+    margin: 0 auto;
+    padding: 40px 50px 20px 125px;
+}
+
+.charity-conteiner__head {
+    padding: 0 11% 0 2%;
+}
+
+.charity-conteiner__info {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.charity-info__bank {
+    list-style-type: none;
+    margin-block: 0;
+    padding-inline: 0;
+}
+
+.essentials-conteiner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 50px 72px 168px;
+}
+
+.essentials-article {
+    margin-bottom: 40px;
+}
+
+.autohelp-conteiner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 50px 72px 168px;
+}
+
+.volunteering-conteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1064px;
+    margin: 0 auto;
+    padding: 0 134px 50px 21px;
+}
+
+.volunteering-figure {
+    width: 49%;
+    position: relative;
+}
+
+.volunteering-figure::before {
+    content: '';
+    position: absolute;
+    background-color: #FFC41E;
+    right: 50%;
+    width: 50vw;
+    top: 0;
+    bottom: 0;
+}
+
+.volunteering-figure__sticker {
+    position: relative;
+    background: url('./assets/image/Ellipse\ 27.png');
+    background-size: cover;
+    border: solid #FFC41E 25px;
+    border-radius: 50%;
+}
+
+.volunteering-figure__sticker::after {
+    content: '';  
+    display: block;
+    padding-bottom: 100%;
+    height: 0;
+}
+
+.volunteering-article {
+    width: 44%;
+    /* padding-left: 30px; */
+    padding-bottom: 59px;
+}
+
+.button-volunteering {
+    margin-top: 8px;
 }
 
 .form-shelter__head {
@@ -587,12 +720,16 @@ input, textarea, .form-autohelp-checkbox__title,
     border-radius: 58px;
     height: 42px;
     width: 223px;
+    text-align: center;
     border: none;
+}
+
+.button-payment_position {
+    margin-top: 24px;
 }
 
 .head__button_size {
     width: 182px;
-    text-align: center;
 }
 
 .button-card_yellow {
