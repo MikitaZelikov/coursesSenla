@@ -173,14 +173,16 @@ body {
 
 .thanks-wrapper {
     background: url('./assets/image/36164\ 1.jpg');
-    width: 1366px;
+    background-size: cover;
+    width: 100%;
     height: 741px;
 }
 
-.thanks-conteiner__icon {
+.thanks-content__icon {
     background: url('./assets/icon/foundation_paw.svg');
     width: 89px;
     height: 89px;
+    margin-top: auto;
 }
 
 /* Text styles */
@@ -324,11 +326,14 @@ input, textarea, .form-autohelp-checkbox__title,
     line-height: 118%;
 }
 
-.thanks-conteiner__text {
+.thanks-content__text {
     font-weight: 700;
     font-size: 4rem;
     line-height: 120%;
     color: #FFFFFF;
+    margin-block: 0;
+    padding-right: 20px;
+    z-index: 1;
 }
 
 .footer__text {
@@ -703,6 +708,92 @@ input, textarea, .form-autohelp-checkbox__title,
 
 .button-volunteering {
     margin-top: 8px;
+}
+
+.news-conteiner {
+    max-width: 778px;
+    margin: 0 auto;
+    padding: 33px 50px 43px 70px;
+}
+
+.news-conteiner__n-block {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-conteiner__n-img {
+    padding-right: 35px;
+}
+
+.news-conteiner__n-text p {
+    margin-block: 0.5em;
+}
+
+.news-conteiner__title {
+    text-align: center;
+}
+
+.about-conteiner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 33px 50px 54px 168px;
+}
+
+.about-title {
+    text-align: center;
+    padding-right: 118px;
+}
+
+.about-information-text-socials {
+    margin-top: 40px;
+}
+
+.thanks-conteiner {
+    padding: 119px 0 101px 94px;
+}
+
+.thanks-content {
+    display: flex;
+    max-width: 521px;
+    padding: 184px 0 183px 40px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #322D1E;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+}
+
+.thanks-content::before {
+    content: '';
+    position: absolute;
+    background-color:#322D1E;
+    right: 50%;
+    width: 80vw;
+    top: 0;
+    bottom: 0;
+}
+
+.footer__list {
+    margin-block: 0;
+    padding-inline-start: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1146px;
+    padding-top: 40px;
+    padding-bottom: 12px;
+}
+
+.footer__copyright {
+   text-align: center; 
+   padding-bottom: 4px;
+}
+
+.footer__item_volunteering {
+    margin-right: 80px;
 }
 
 .form-shelter__head {
