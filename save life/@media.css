@@ -1,0 +1,291 @@
+@media (max-width: 1269px) {
+    .head {
+        max-width: 44%;
+        min-height: 50vw;  
+        padding: 0 110px;
+        margin: 0;   
+    }
+
+    .header__nav {
+        column-gap: 52px;
+    }
+
+    .header-conteiner::after {
+        background: url('./assets/image/dog\ 1\(1269\).jpg');
+        width: 504px;
+        height: 564px;
+        margin-left: 300px;
+    }
+
+    .head::after {
+        background: url('./assets/image/cat\ 1\(1024\).png');
+        width: 344px;
+        height: 326px;
+        top: 240px;
+        left: 463px;
+    }
+
+    h1 {
+        font-size: 4rem;
+        line-height: 120%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .major-description__organization {
+        line-height: 115%;
+        font-size: 0.875rem;
+    }
+
+    .major-description__goal {
+        font-size: 0.875rem;   
+    }
+
+    .head__text {
+        font-size: 1.25rem;
+    }
+
+    .head__watermark_1 {
+        background: url('./assets/image/Я\ буду\(1024\).png');
+        width: 445px;
+        height: 143px;
+        left: 0;
+        top: 18vw;
+    }
+
+    .head__watermark_2 {
+        background: url('./assets/image/лучшим\(1024\).png');
+        width: 397px;
+        height: 80px;
+        left: 0;
+        top: 32vw;
+    }
+    
+    .head__watermark_3 {
+        background: url('./assets/image/другом\(1024\).png');
+        width: 352px;
+        height: 80px;
+        left: 22vw;
+        top: 39vw;
+    }
+
+    .hearts-conteiner {
+        max-width: 75vw;
+        align-items: flex-start;
+        padding: 2.25em 7em 1.25em 1.5em;
+    }
+
+    .hearts-figure__sticker1 {
+        border-width: 20px;
+    }
+}
+
+
+
+
+@media (max-width: 767px) {
+    .header-conteiner {
+        padding: 24px 129px 0;
+        justify-content: flex-end;
+    }
+
+    .header-conteiner::after {
+        background: url('./assets/image/dog\ 2\(640\).jpg');
+        width: 312px;
+        height: 357px;
+        top: 0;
+        right: 0;
+    }
+
+    .head::after {
+        background: url('./assets/image/cat\ 1\(640\).png');
+        width: 165px;
+        height: 157px;
+        top: 172px;
+        left: calc(100vw - 260px);
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__socials {
+        width: 86px;
+    }
+
+    .header-socials__link svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .head {
+        min-height: 75vw;
+        padding: 0 129px;
+    }
+
+    h1 {
+        font-size: 1.875rem;
+        line-height: 120%;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p, 
+    .charity-info__item,
+    .essentials-article__item {
+    font-size: 0.875rem;
+    }
+
+
+    .major-description__organization {
+        line-height: 117%;
+        font-size: 0.75rem;
+    }
+
+    .head__text {
+        font-size: 1rem;
+        position: absolute;
+        top: 300px;
+        left: 20vw;
+        text-align: center;
+    }
+    
+    .head-button__text {
+        font-size: 1.125rem;
+        line-height: 222%;
+    }
+
+    .head__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 194px;
+        height: 30px;
+        position: absolute;
+        top: 410px;
+        left: calc(50vw - 97px);
+    }
+
+    .head__watermark_1 {
+        background: url('./assets/image/Я\ буду\(640\).png');
+        background-size: cover;
+        width: 310px;
+        height: 100px;
+        left: 0;
+        top: 15vw;
+    }
+
+    .head__watermark_2 {
+        background: url('./assets/image/лучшим\(640\).png');
+        width: 277px;
+        height: 56px;
+        left: 0;
+        top: 31vw;
+    }
+    
+    .head__watermark_3 {
+        background: url('./assets/image/другом\(640\).png');
+        width: 246px;
+        height: 56px;
+        left: 24vw;
+        top: 40vw;
+    }
+
+    .hearts-conteiner {
+        flex-direction: column;
+        max-width: 60vw;
+        align-items: center;
+        padding: 1em 0 0;
+    }
+
+    .hearts-conteiner__article {
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    .hearts__figure {
+        width:50%;
+    }
+
+    .hearts-figure__sticker1 {
+        border-width: 10px;
+    }
+}
+
+
+
+
+@media (max-width: 639px) {
+    .head {
+        min-height: 480px;
+        padding: 0 30px;
+    }
+
+    .header-conteiner::after {
+        background: url('./assets/image/dog\ 3\(360\).jpg');
+        width: 225px;
+        height: 357px;
+        margin-left: 105px;
+    }
+
+    .head::after {
+        left: calc(100vw - 216px);
+    }
+
+    .head__major-description {
+        min-width: 60vw;
+
+    }
+
+    .major-description__goal {
+        width: 70%;
+    }
+
+    .head__text {
+        width: 80vw;
+        left: 10vw;
+    }
+
+    .head__button {
+        top: 430px;
+    }
+
+    .head__watermark_1 {
+        background: url('./assets/image/Я\ буду\(360\).png');
+        background-size: cover;
+        width: 175px;
+        height: 56px;
+        left: 0;
+        top: 50vw;
+    }
+
+    .head__watermark_2 {
+        background: url('./assets/image/лучшим\(360\).png');
+        width: 156px;
+        height: 31px;
+        left: 0;
+        top: 66vw;
+    }
+    
+    .head__watermark_3 {
+        background: url('./assets/image/другом\(360\).png');
+        width: 139px;
+        height: 31px;
+        left: 22vw;
+        top: 77vw;
+    }
+
+    .hearts-conteiner {
+        max-width: 83vw;
+    }
+
+    .hearts__figure {
+        width: 192px;
+        height: 192px;
+    }
+
+}

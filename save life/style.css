@@ -104,7 +104,7 @@ body {
     width: 718px;
     height: 713px;
     top: 0;
-    right: 0;
+    margin-left: 428px;
 }
 
 .head::after {
@@ -115,14 +115,14 @@ body {
     width: 483px;
     height: 469px;
     top: 330px;
-    right: 166px;
+    left: 607px;
 }
 
 .head__watermark_1 {
     background: url('./assets/image/Я\ буду.png');
     width: 599px;
     height: 192px;
-    left: -110px;
+    left: 0;
     top: 225px;
 }
 
@@ -130,14 +130,15 @@ body {
     background: url('./assets/image/лучшим.png');
     width: 534px;
     height: 107px;
-    left: -110px;
+    left: 0;
+    top: 420px;
 }
 
 .head__watermark_3 {
     background: url('./assets/image/другом.png');
     width: 474px;
     height: 107px;
-    left: 186px;
+    left: 296px;
     top: 530px;
 }
 
@@ -219,6 +220,7 @@ h2 {
 }
 
 .head__text {
+    width: 65%;
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 121%;
@@ -267,6 +269,7 @@ h2 {
     font-weight: 300;
     line-height: 112.5%;
     color: #6B6B6B;
+    margin-block-start: 0;
 }
 
 .options-help__text {
@@ -388,13 +391,12 @@ input, textarea, .form-autohelp-checkbox__title,
     position: relative;
     display: flex;
     justify-content: space-between;
-    max-width: 1146px;
+    max-width: 1049px;
     margin: 0 auto;
-    padding-top: 39px;
+    padding: 39px 207px 0 110px;
 }
 
-.header__socials {
-    margin-right: 8.46%;
+.header__socials { 
     width: 126px;
     display: flex;
     justify-content: space-between;
@@ -403,7 +405,7 @@ input, textarea, .form-autohelp-checkbox__title,
 .header__nav {
     display: flex;
     justify-content: space-between;
-    width: 55.4%;
+    column-gap: 194px;
 }
 
 .header-nav__list {
@@ -411,25 +413,19 @@ input, textarea, .form-autohelp-checkbox__title,
     justify-content: space-between;
     list-style-type: none;
     padding-inline-start: 0px;
-}
-
-.header-nav__item_indent {
-    margin-right: 32px;
+    column-gap: 32px;
 }
 
 .head {
-    max-width: 1146px;
+    max-width: 660px;
     margin: 0 auto;
     position: relative;
     min-height: 670px;
+    padding: 0px 596px 0 110px;
 }
 
 .major-description__title {
     margin-block-end: 0;
-}
-
-.major-description__organization {
-    margin-block-start: 0;
 }
 
 .head__watermark {
