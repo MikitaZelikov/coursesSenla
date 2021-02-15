@@ -74,6 +74,8 @@ body {
 .options-help__icon {
     width: 150px;
     height: 150px;
+    margin: 0 auto;
+    background-size: cover;
 }
 
 .options-help__icon_1 {
@@ -96,7 +98,7 @@ body {
     background: url('./assets/icon/Group\ 13.svg');
 }
 
-.header-conteiner::after {
+.header-container::after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -173,7 +175,7 @@ body {
 }
 
 .thanks-wrapper {
-    background: url('./assets/image/36164\ 1.jpg');
+    background: url('./assets/image/36164_1.jpg');
     background-size: cover;
     width: 100%;
     height: 741px;
@@ -183,7 +185,7 @@ body {
     background: url('./assets/icon/foundation_paw.svg');
     width: 89px;
     height: 89px;
-    margin-top: auto;
+    margin-top: 50%;
 }
 
 /* Text styles */
@@ -259,7 +261,7 @@ h2 {
     font-weight: 300;
 }
 
-.hearts-conteiner-article__title {
+.hearts-container-article__title {
     line-height: 120%;
     color: #C78100;
     text-align: center;
@@ -297,7 +299,7 @@ input, textarea, .form-autohelp-checkbox__title,
 }
 
 .pets-card__text_sex-age, 
-.charity-conteiner__text,
+.charity-container__text,
 .form-shelter-cutaway__sex-age,
 .form-shelter__text,
 .about-information-text-socials {
@@ -305,7 +307,7 @@ input, textarea, .form-autohelp-checkbox__title,
 }
 
 .pets-social-networks__text, 
-.charity-conteiner__text,
+.charity-container__text,
 .about-information__text {
     font-weight: normal;
     font-size: 1.125rem;
@@ -313,7 +315,7 @@ input, textarea, .form-autohelp-checkbox__title,
 }
 
 .about-information__text, 
-.charity-conteiner__text {
+.charity-container__text {
     font-weight: 500;
 }
 
@@ -335,7 +337,7 @@ input, textarea, .form-autohelp-checkbox__title,
     line-height: 120%;
     color: #FFFFFF;
     margin-block: 0;
-    padding-right: 20px;
+    padding: 2.875em 0.5em;
     z-index: 1;
 }
 
@@ -383,11 +385,7 @@ input, textarea, .form-autohelp-checkbox__title,
 
 /* Blocks markup */
 
-/* .header {
-    background-color: #47474765;
-} */
-
-.header-conteiner {
+.header-container {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -433,7 +431,7 @@ input, textarea, .form-autohelp-checkbox__title,
     z-index: -1;    
 }
 
-.hearts-conteiner {
+.hearts-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -490,38 +488,33 @@ input, textarea, .form-autohelp-checkbox__title,
     height: 0;
 }
 
-.hearts-conteiner__article {
+.hearts-container__article {
     width: 43%;
 }
 
-.options-help__conteiner {
+.options-help__container {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     max-width: 1146px;
-    padding-top: 56px;
-    padding-bottom: 64px;
+    padding: 56px 110px 64px;
     align-items: center;
 }
 
 .options-help__box {
     display: flex;
     justify-content: space-between;
-    column-gap: 20px;
+    column-gap: 16px;
     flex-wrap: wrap;
     margin-top: 23px;
 }
 
 .options-help__item {
-    flex-basis: 14%;
+    flex-basis: 16%;
 }
 
 .options-help__link {
     text-decoration: none;
-}
-
-.options-help__icon {
-    margin: 0 auto;
 }
 
 .banner {
@@ -538,7 +531,7 @@ input, textarea, .form-autohelp-checkbox__title,
     margin: 0;
 }
 
-.shelter__conteiner {
+.shelter__container {
     display: flex;
     justify-content: space-between;
     max-width: 875px;
@@ -556,6 +549,25 @@ input, textarea, .form-autohelp-checkbox__title,
     align-items: center;
 }
 
+#pets-card_1 {
+    grid-area: a;
+}
+#pets-card_2 {
+    grid-area: b;
+}
+#pets-card_3 {
+    grid-area: c;
+}
+#pets-card_4 {
+    grid-area: d;
+}
+#pets-card_5 {
+    grid-area: e;
+}
+#pets-card_6 {
+    grid-area: f;
+}
+
 .pets__catalog {
     margin: 0 auto;
     display: grid;
@@ -567,7 +579,7 @@ input, textarea, .form-autohelp-checkbox__title,
     row-gap: 44px;
 }
 
-.all-pets__conteiner {
+.all-pets__container {
     margin: 0 auto;
     display: grid;
     width: 83.9vw;
@@ -592,10 +604,10 @@ input, textarea, .form-autohelp-checkbox__title,
     margin-inline: 0;
 }
 
-.button-card-conteiner,
+.button-card-container,
 .pets-card__text_name,
-.charity-conteiner__title,
-.charity-conteiner__text {
+.charity-container__title,
+.charity-container__text {
     text-align: center;
 }
 
@@ -619,20 +631,23 @@ input, textarea, .form-autohelp-checkbox__title,
     margin-bottom: 30px;
 }
 
-.charity-conteiner {
+.charity-container {
     max-width: 875px;
     margin: 0 auto;
     padding: 40px 50px 20px 125px;
 }
 
-.charity-conteiner__head {
+.charity-container__head {
     padding: 0 11% 0 2%;
 }
 
-.charity-conteiner__info {
+.charity-container__info {
     display: flex;
     justify-content: space-between;
-    
+}
+
+.charity-info {
+        width: 45%;
 }
 
 .charity-info__bank {
@@ -641,23 +656,18 @@ input, textarea, .form-autohelp-checkbox__title,
     padding-inline: 0;
 }
 
-.essentials-conteiner {
+.essentials-container,
+.autohelp-container {
     max-width: 680px;
     margin: 0 auto;
-    padding: 40px 50px 72px 168px;
+    padding: 40px 1.3vw 72px 10vw;
 }
 
 .essentials-article {
     margin-bottom: 40px;
 }
 
-.autohelp-conteiner {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 40px 50px 72px 168px;
-}
-
-.volunteering-conteiner {
+.volunteering-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -698,7 +708,6 @@ input, textarea, .form-autohelp-checkbox__title,
 
 .volunteering-article {
     width: 44%;
-    /* padding-left: 30px; */
     padding-bottom: 59px;
 }
 
@@ -706,54 +715,50 @@ input, textarea, .form-autohelp-checkbox__title,
     margin-top: 8px;
 }
 
-.news-conteiner {
+.news-container {
     max-width: 778px;
     margin: 0 auto;
     padding: 33px 50px 43px 70px;
 }
 
-.news-conteiner__n-block {
+.news-container__n-block {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.news-conteiner__n-img {
+.news-container__n-img {
     padding-right: 35px;
 }
 
-.news-conteiner__n-text p {
+.news-container__n-text p {
     margin-block: 0.5em;
 }
 
-.news-conteiner__title {
+.news-container__title,
+.about-title {
     text-align: center;
 }
 
-.about-conteiner {
+.about-container {
     max-width: 680px;
     margin: 0 auto;
     padding: 33px 50px 54px 168px;
-}
-
-.about-title {
-    text-align: center;
-    padding-right: 118px;
 }
 
 .about-information-text-socials {
     margin-top: 40px;
 }
 
-.thanks-conteiner {
-    padding: 119px 0 101px 94px;
+.thanks-container {
+    padding-top: 119px;
+    padding-left: 94px;
 }
 
 .thanks-content {
     display: flex;
     max-width: 521px;
-    padding: 184px 0 183px 40px;
     box-sizing: border-box;
     position: relative;
     background-color: #322D1E;

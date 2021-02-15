@@ -10,15 +10,15 @@
 </head>
 <body>
     <header class="header">
-        <div class="header-conteiner">
+        <div class="header-container">
             <nav class="header__nav header-nav">
                 <ul class="header-nav__list">
-                    <li class="header-nav__item"><a class="header-nav__link" href="#">Как помочь</a></li>
-                    <li class="header-nav__item"><a class="header-nav__link" href="#">Подопечные животные</a></li>
+                    <li class="header-nav__item"><a class="header-nav__link" href="#help">Как помочь</a></li>
+                    <li class="header-nav__item"><a class="header-nav__link" href="#pets">Подопечные животные</a></li>
                 </ul>
                 <ul class="header-nav__list">
-                    <li class="header-nav__item"><a class="header-nav__link" href="#">О нас</a></li>
-                    <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+                    <li class="header-nav__item"><a class="header-nav__link" href="#about">О нас</a></li>
+                    <li class="header-nav__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
             <div class="header__socials header-socials">
@@ -35,7 +35,7 @@
                         </svg>    
                 </a>
             </div>
-        </div>  
+        </div>                      
     </header>
     <main class="main">
         <article class="head">
@@ -55,7 +55,7 @@
                 несколько дней до усыпления...
             </p>
             <div class="head__button head__button_size">
-                <a href="#" class="head-button__link">
+                <a href="#help" class="head-button__link">
                     <span class="head-button__text">Хочу помочь</span>
                 </a>
             </div>     
@@ -64,18 +64,18 @@
             <div class="head__watermark head__watermark_3"></div>
         </article>
         <section class="hearts-wrapper">
-            <div class="hearts-conteiner">
+            <div class="hearts-container">
                 <div class="hearts__figure hearts-figure">
                     <div class="hearts-figure__sticker1"></div>
                     <div class="hearts-figure__sticker2"></div>
                 </div>
-                <div class="hearts-conteiner__article hearts-conteiner-article">
-                    <h2 class="hearts-conteiner-article__title">
+                <div class="hearts-container__article hearts-container-article">
+                    <h2 class="hearts-container-article__title">
                         Тут большие добрые сердца
                         помогают жить маленьким
                         сердечкам
                     </h2>
-                    <p class="hearts-conteiner-article__text">
+                    <p class="hearts-container-article__text">
                         Ежедневно в пункт временного содержания, путём отлова,
                         попадают безнадзорные собаки и коты. По закону, у
                         животных находящихся в САХе есть всего лишь несколько
@@ -84,7 +84,7 @@
                         УСЫПЛЕНИЕ! Здесь вы сможете найти своего как
                         потерявшегося, так и нового верного друга! 
                     </p>
-                    <p class="hearts-conteiner-article__text">
+                    <p class="hearts-container-article__text">
                         Если нет возможности забрать хвостика, вы можете помочь
                         нам финансово или другой материальной помощью. Еще нам
                         всегда нужны добрые и отзывчивые люди - волонтеры, без
@@ -93,36 +93,36 @@
                 </div>
             </div>
         </section>
-        <section class="options-help">
-            <div class="options-help__conteiner">
+        <section class="options-help" id="help">
+            <div class="options-help__container">
                 <h2 class="options-help__title">Как помочь?</h2>
                 <div class="options-help__box">
                     <div class="options-help__item">
-                        <a class="options-help__link" href="">
+                        <a class="options-help__link" href="#shelter">
                             <div class="options-help__icon options-help__icon_1"></div>
                             <p class="options-help__text">Дать хвостику дом или взять на передержку</p>
                         </a>
                     </div>
                     <div class="options-help__item">
-                        <a class="options-help__link" href="">
+                        <a class="options-help__link" href="#charity">
                             <div class="options-help__icon options-help__icon_2"></div>
                             <p class="options-help__text">Перечислить деньги в фонд помощи</p>
                         </a>
                     </div>
                     <div class="options-help__item">
-                        <a class="options-help__link" href="">
+                        <a class="options-help__link" href="#essentials">
                             <div class="options-help__icon options-help__icon_3"></div>
                             <p class="options-help__text">Привезти корм, лекарства или другие вещи</p>
                         </a>
                     </div>
                     <div class="options-help__item">
-                        <a class="options-help__link" href="">
+                        <a class="options-help__link" href="#autohelp">
                             <div class="options-help__icon options-help__icon_4"></div>
                             <p class="options-help__text">Доставить животным еду или отвезти в больницу</p>
                         </a>
                     </div>
                     <div class="options-help__item">
-                        <a class="options-help__link" href="">
+                        <a class="options-help__link" href="#volunteering">
                             <div class="options-help__icon options-help__icon_5"></div>
                             <p class="options-help__text">Выгуливать, кормить, мыть или лечить хвостиков</p>
                         </a>
@@ -130,13 +130,13 @@
                 </div>
             </div>
         </section>
-        <div class="banner">
+        <div class="banner" id="shelter">
             <hr class="banner__line">
             <div class="banner__icon banner__icon_type1"></div>
             <hr class="banner__line">
         </div>
         <section class="shelter">
-            <div class="shelter__conteiner">
+            <div class="shelter__container">
                 <div class="shelter__article shelter-article">
                     <h2 class="shelter-article__title">Дом и любовь для хвостика</h2>
                     <p class="shelter-article__text">
@@ -161,12 +161,18 @@
                 </div>
             </div>
         </section>
-        <section class="pets">
+        <section class="pets" id="pets">
             <h2 class="pets__title">Наши подопечные</h2>    
             <div class="pets__catalog">
-                <article class="pets__card pets-card" style="grid-area: a;">
+                <article class="pets__card pets-card" id="pets-card_1">
                     <figure>
-                        <img src="./assets/image/pets 1.jpg" alt="палевый щенок с висячими ушами">
+                        <img
+                            srcset="./assets/image/pets%201(640).jpg 272w,
+                                    ./assets/image/pets%201.jpg 335w"
+                            sizes="(max-width: 767px) 272px,
+                                    335px" 
+                            src="./assets/image/pets 1.jpg"
+                            alt="палевый щенок с висячими ушами">
                         <figcaption>
                             <p class="pets-card__text pets-card__text_name">Моник</p>
                             <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
@@ -179,7 +185,7 @@
                             </p>
                         </figcaption>
                     </figure>
-                    <div class="button-card-conteiner">
+                    <div class="button-card-container">
                         <button class="button-card button-card_yellow">
                             <span class="button-card__text button-card__text_color">Забрать домой</span>
                         </button>
@@ -188,9 +194,15 @@
                         </button>
                     </div>
                 </article>
-                <article class="pets__card pets-card" style="grid-area: b;">
+                <article class="pets__card pets-card" id="pets-card_2">
                     <figure>
-                        <img src="./assets/image/pets 6.jpg" alt="белый котёнок">
+                        <img
+                            srcset="./assets/image/pets%206(640).jpg 272w,
+                                    ./assets/image/pets%206.jpg 335w"
+                            sizes="(max-width: 767px) 272px,
+                                    335px" 
+                            src="./assets/image/pets 6.jpg"
+                            alt="белый котенок с серой шерстью на голове"> 
                         <figcaption>
                             <p class="pets-card__text pets-card__text_name">Лунатик</p>
                             <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
@@ -199,7 +211,7 @@
                             </p>
                         </figcaption>
                     </figure>
-                    <div class="button-card-conteiner">
+                    <div class="button-card-container">
                         <button class="button-card button-card_yellow">
                             <span class="button-card__text button-card__text_color">Забрать домой</span>
                         </button>
@@ -208,9 +220,15 @@
                         </button>
                     </div>
                 </article>
-                <article class="pets__card pets-card" style="grid-area: c;">
+                <article class="pets__card pets-card" id="pets-card_3">
                     <figure>
-                        <img src="./assets/image/pets 2.jpg" alt="темная девочка с разноцветными глазами">
+                        <img 
+                            srcset="./assets/image/pets%202(640).jpg 272w,
+                                    ./assets/image/pets%202.jpg 335w"
+                            sizes="(max-width: 767px) 272px,
+                                    335px" 
+                            src="./assets/image/pets 2.jpg"
+                            alt="темная девочка с разноцветными глазами">
                         <figcaption>
                             <p class="pets-card__text pets-card__text_name">Герда</p>
                             <p class="pets-card__text pets-card__text_sex-age">Мальчик, 7 месяцев</p>
@@ -219,7 +237,7 @@
                             </p>
                         </figcaption>
                     </figure>
-                    <div class="button-card-conteiner">
+                    <div class="button-card-container">
                         <button class="button-card button-card_yellow">
                             <span class="button-card__text button-card__text_color">Забрать домой</span>
                         </button>
@@ -228,7 +246,7 @@
                         </button>
                     </div>
                 </article>
-                <article class="pets__card pets-card" style="grid-area: d;">
+                <article class="pets__card pets-card" id="pets-card_4">
                     <figure>
                         <img src="./assets/image/pets 3.jpg" alt="пушистый белый кот">
                         <figcaption>
@@ -239,7 +257,7 @@
                             </p>
                         </figcaption>
                     </figure>
-                    <div class="button-card-conteiner">
+                    <div class="button-card-container">
                         <button class="button-card button-card_yellow">
                             <span class="button-card__text button-card__text_color">Забрать домой</span>
                         </button>
@@ -248,7 +266,7 @@
                         </button>
                     </div>
                 </article>
-                <article class="pets__card pets-card" style="grid-area: e;">
+                <article class="pets__card pets-card" id="pets-card_5">
                     <figure>
                         <img src="./assets/image/pets 4.jpg" alt="рыжая гладкошерстная такса">
                         <figcaption>
@@ -259,7 +277,7 @@
                             </p>
                         </figcaption>
                     </figure>
-                    <div class="button-card-conteiner">
+                    <div class="button-card-container">
                         <button class="button-card button-card_yellow">
                             <span class="button-card__text button-card__text_color">Забрать домой</span>
                         </button>
@@ -268,7 +286,7 @@
                         </button>
                     </div>
                 </article>
-                <article class="pets__card pets-card" style="grid-area: f;">
+                <article class="pets__card pets-card" id="pets-card_6">
                     <figure>
                         <img src="./assets/image/pets 5.jpg" alt="палевый пёс">
                         <figcaption>
@@ -279,7 +297,7 @@
                             </p>
                         </figcaption>
                     </figure>
-                    <div class="button-card-conteiner">
+                    <div class="button-card-container">
                         <button class="button-card button-card_yellow">
                             <span class="button-card__text button-card__text_color">Забрать домой</span>
                         </button>
@@ -315,21 +333,21 @@
                 </a>
             </div>
         </div>
-        <section class="charity-wrapper">
+        <section class="charity-wrapper" id="charity">
             <div class="banner banner-charity">
                 <hr class="banner__line">
                 <div class="banner__icon banner__icon_type2"></div>
                 <hr class="banner__line">
             </div>
-            <div class="charity-conteiner">
-                <div class="charity-conteiner__head">
-                    <h2 class="charity-conteiner__title">Финансовая поддержка</h2>
-                    <p class="charity-conteiner__text">
-                        Такая помощь необходима для оплаты стерилизации, прививок, лечения больных<br>
+            <div class="charity-container">
+                <div class="charity-container__head">
+                    <h2 class="charity-container__title">Финансовая поддержка</h2>
+                    <p class="charity-container__text">
+                        Такая помощь необходима для оплаты стерилизации, прививок, лечения больных
                         животных, покупка корма и других жизненно необходимых вещей.
                     </p>
                 </div>
-                <div class="charity-conteiner__info">
+                <div class="charity-container__info">
                     <div class="charity-info">
                         <h2 class="charity-info__title">Расчетный счет в Банке</h2>
                         <ul class="charity-info__bank">
@@ -341,7 +359,7 @@
                             <li class="charity-info__item">БИК: ALFABY2X</li> 
                         </ul>
                         <div class="button-payment button-payment_position">
-                            <a href="#" class="button-payment__link">
+                            <a href="https://express-pay.by/" class="button-payment__link">
                                 <span class="button-payment__text">Быстрый платеж</span>
                             </a>
                         </div>
@@ -365,13 +383,13 @@
                 </div>
             </div>
         </section>
-        <div class="banner banner-essentials">
+        <div class="banner banner-essentials" id="essentials">
             <hr class="banner__line">
             <div class="banner__icon banner__icon_type3"></div>
             <hr class="banner__line">
         </div>
         <section class="essentials">
-            <div class="essentials-conteiner">
+            <div class="essentials-container">
                 <div class="essentials__article essentials-article">
                     <h2 class="essentials-article__title">Корма</h2>   
                     <span class="essentials-article__item">Можно помочь с покупкой и доставкой еды для хвостатых:</span>
@@ -409,13 +427,13 @@
                 </a>
             </div>
         </section>
-        <div class="banner banner-autohelp">
+        <div class="banner banner-autohelp" id="autohelp">
             <hr class="banner__line">
             <div class="banner__icon banner__icon_type4"></div>
             <hr class="banner__line">
         </div>
         <section class="autohelp">
-            <div class="autohelp-conteiner">
+            <div class="autohelp-container">
                 <h2 class="autohelp__title">Автопомощь</h2>
                 <p class="autohelp__text">
                     Важной помощью будет транспортировка. Необходимо отвозить животных в
@@ -427,13 +445,13 @@
                 </button>
             </div>
         </section>
-        <div class="banner">
+        <div class="banner" id="volunteering">
             <hr class="banner__line">
             <div class="banner__icon banner__icon_type5"></div>
             <hr class="banner__line">
         </div>
         <section class="volunteering">
-            <div class="volunteering-conteiner">
+            <div class="volunteering-container">
                 <div class="volunteering-figure">
                     <div class="volunteering-figure__sticker"></div>
                 </div>
@@ -456,11 +474,21 @@
             </div>
         </section>
         <div class="news-wrapper">
-            <section class="news-conteiner">
-                <h2 class="news-conteiner__title">Новости</h2>
-                <article class="news-conteiner__n-block">
-                    <img class="news-conteiner__n-img" src="./assets/image/Ellipse 1.png" alt="черный пес с висячими ушами">
-                    <div class="news-conteiner__n-text">
+            <section class="news-container">
+                <h2 class="news-container__title">Новости</h2>
+                <article class="news-container__n-block">
+                    <img 
+                        class="news-container__n-img"
+                        srcset="./assets/image/Ellipse%201(640).png 79w,
+                                ./assets/image/Ellipse%201(1024).png 130w,
+                                ./assets/image/Ellipse%201.png 140w"
+                        sizes="(max-width: 767px) 79px,
+                                (max-width: 1269px) 130px,
+                                140px" 
+                        src="./assets/image/Ellipse 1.png"
+                        alt="черный пес с висячими ушами"
+                    >
+                    <div class="news-container__n-text">
                         <p>
                             Срочно необходимо забрать собаку (мальчик) на передержку или насовсем.
                             Послезавтра его ждет усыпление. С кормом и доставкой поможем. В данный
@@ -474,9 +502,19 @@
                         </p>
                     </div>
                 </article>
-                <article  class="news-conteiner__n-block">
-                    <img class="news-conteiner__n-img" src="./assets/image/Ellipse 2.png" alt="щенки черные с палевым">
-                    <div class="news-conteiner__n-text">
+                <article  class="news-container__n-block">
+                    <img 
+                        class="news-container__n-img"
+                        srcset="./assets/image/Ellipse%202(640).png 79w,
+                                ./assets/image/Ellipse%202(1024).png 130w,
+                                ./assets/image/Ellipse%202.png 140w"
+                        sizes="(max-width: 767px) 79px,
+                                (max-width: 1269px) 130px,
+                                140px" 
+                        src="./assets/image/Ellipse 2.png" 
+                        alt="щенки черные с палевым"
+                    >
+                    <div class="news-container__n-text">
                         <p>
                             Найдены бедомные щенки по улице Горького д.56.
                         </p>
@@ -491,8 +529,8 @@
                 </a>
             </section>
         </div>
-        <section class="about">
-            <div class="about-conteiner">
+        <section class="about" id="about">
+            <div class="about-container">
                 <h2 class="about-title">О нас</h2>
                 <div class="about-information">
                     <p class="about-information__text">
@@ -501,7 +539,7 @@
                         оказавшимся в Пункте отлова и временного содержания безнадзорных
                         животных г.Гродно.
                     </p>
-                    <p class="about-information__title">Контакты</p>
+                    <p class="about-information__title" id="contacts">Контакты</p>
                     <p class="about-information__contacts">
                         Если Вы хотите приютить одного из этих четвероногих или оказать какую-либо помощь,
                         звоните волонтёрам:<br>
@@ -528,7 +566,7 @@
             </div>
         </section>
         <div class="thanks-wrapper">
-            <div class="thanks-conteiner">
+            <div class="thanks-container">
                 <div class="thanks-content">
                     <p class="thanks-content__text">
                         Спасибо<br> 
@@ -542,37 +580,37 @@
     <footer class="footer">
         <ul class="footer__list">
             <li class="footer__item">
-                <a class="footer__link" href="">
+                <a class="footer__link" href="#shelter">
                     <span class="footer__text">Дом или передержка</span>
                 </a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="">
+                <a class="footer__link" href="#charity">
                     <span class="footer__text">Финансовая поддержка</span>
                 </a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="">
+                <a class="footer__link" href="#essentials">
                     <span class="footer__text">Корма, лекарства и другие вещи</span>
                 </a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="">
+                <a class="footer__link" href="#autohelp">
                     <span class="footer__text">Автопомощь</span>
                 </a>
             </li>
             <li class="footer__item footer__item_volunteering">
-                <a class="footer__link" href="">
+                <a class="footer__link" href="#volunteering">
                     <span class="footer__text">Волонтерство</span>
                 </a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="">
+                <a class="footer__link" href="#about">
                     <span class="footer__text footer__text_normal">О нас</span>
                 </a>
             </li>
             <li class="footer__item">
-                <a class="footer__link" href="">
+                <a class="footer__link" href="#contacts">
                     <span class="footer__text footer__text_normal">Контакты</span>
                 </a>
             </li>

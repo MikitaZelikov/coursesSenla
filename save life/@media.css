@@ -10,7 +10,7 @@
         column-gap: 52px;
     }
 
-    .header-conteiner::after {
+    .header-container::after {
         background: url('./assets/image/dog\ 1\(1269\).jpg');
         width: 504px;
         height: 564px;
@@ -32,6 +32,12 @@
 
     h2 {
         font-size: 1.5rem;
+        line-height: 100%;
+    }
+
+    .pets-social-networks__text {
+        font-size: 1rem;
+        line-height: 140%;
     }
 
     .major-description__organization {
@@ -39,7 +45,8 @@
         font-size: 0.875rem;
     }
 
-    .major-description__goal {
+    .major-description__goal,
+    .about-information__contacts {
         font-size: 0.875rem;   
     }
 
@@ -71,7 +78,21 @@
         top: 39vw;
     }
 
-    .hearts-conteiner {
+    .thanks-wrapper {
+        background: url('./assets/image/36164_2.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 555px;
+    }
+
+    .thanks-content__icon {
+        background: url('./assets/icon/foundation_paw\(1024\).svg');
+        width: 67px;
+        height: 67px;
+    }
+
+    .hearts-container,
+    .volunteering-container {
         max-width: 75vw;
         align-items: flex-start;
         padding: 2.25em 7em 1.25em 1.5em;
@@ -80,18 +101,137 @@
     .hearts-figure__sticker1 {
         border-width: 20px;
     }
+
+    .options-help__icon {
+        width: 110px;
+        height: 110px;
+        background-size: cover;
+    }
+
+    .options-help__text {
+        font-size: 0.875rem;
+        line-height: 143%;
+    }
+
+    .options-help__title {
+        line-height: 100%;
+    }
+
+    .banner__icon_type1 {
+        width: 121px;
+        height: 118px;
+        background-size: cover;
+    }
+
+    .banner__icon_type2 {
+        width: 89px;
+        height: 65px;
+        background-size: cover;
+    }
+
+    .banner__icon_type3 {
+        width: 87px;
+        height: 69px;
+        background-size: cover;
+    }
+
+    .banner__icon_type4 {
+        width: 83px;
+        height: 81px;
+        background-size: cover;
+    }
+
+    .banner__icon_type5 {
+        width: 56px;
+        height: 76px;
+        background-size: cover;
+    }
+
+    .shelter__container {
+        max-width: 60vw;
+        padding: 40px 50px 32px 98px;
+    }
+
+    .pets__catalog {
+        max-width: 804px;
+        grid-template-areas: 
+        "a b"
+        "c d"
+        "e f";
+        column-gap: 68px;
+    }
+
+    .charity-container {
+        max-width: 60vw;
+        padding: 20px;
+    }    
+
+    .charity-container__text,
+    .about-information__text {
+        font-size: 1rem;
+        line-height: 150%;
+    }
+
+    .charity-info__item {
+        font-size: 0.875rem;
+    }
+
+    .essentials-container,
+    .autohelp-container {
+        max-width: 47vw;
+    }
+
+    .news-container {
+        max-width: 60vw;
+        padding: 2.25em 1.5em 1.25em 7em;
+    }
+
+    .about-container {
+        max-width: 47vw;
+        margin: 0 auto;
+        padding: 33px 1.3vw 54px 10vw;
+    }
+
+    .thanks-container {
+        padding-top: 8.7vw;
+        padding-left: 6.9vw;
+    }
+
+    .thanks-content__text {
+        font-size: 3rem;
+    }
+
+    .thanks-content {
+        max-width: 38vw;
+    }
+
+    .footer__list {
+        max-width: 804px;
+    }
+
+    .footer__list {
+        max-width: 804px;
+        column-gap: 26px;
+        row-gap: 24px;
+        justify-content: flex-start;
+        padding-top: 24px;
+    }
+
+    .footer__item_volunteering {
+        margin-right: 0;
+    }
 }
 
 
 
 
 @media (max-width: 767px) {
-    .header-conteiner {
+    .header-container {
         padding: 24px 129px 0;
         justify-content: flex-end;
     }
 
-    .header-conteiner::after {
+    .header-container::after {
         background: url('./assets/image/dog\ 2\(640\).jpg');
         width: 312px;
         height: 357px;
@@ -120,6 +260,11 @@
         height: 32px;
     }
 
+    .pets-social-networks__link svg {
+        width: 32px;
+        height: 32px;
+    }
+
     .head {
         min-height: 75vw;
         padding: 0 129px;
@@ -132,12 +277,16 @@
 
     h2 {
         font-size: 1rem;
+        line-height: 150%;
     }
 
-    p, 
-    .charity-info__item,
+    p,
     .essentials-article__item {
-    font-size: 0.875rem;
+        font-size: 0.875rem;
+    }
+    
+    .pets-social-networks__text {
+        font-size: 0.875rem;
     }
 
 
@@ -154,9 +303,17 @@
         text-align: center;
     }
     
-    .head-button__text {
+    .head-button__text,
+    .button-payment__text,
+    .button-autohelp__text,
+    .button-volunteering__text {
         font-size: 1.125rem;
         line-height: 222%;
+    }
+
+    .about-information__text {
+        font-size: 0.875rem;
+        line-height: 143%;
     }
 
     .head__button {
@@ -195,14 +352,15 @@
         top: 40vw;
     }
 
-    .hearts-conteiner {
+    .hearts-container,
+    .volunteering-container {
         flex-direction: column;
         max-width: 60vw;
         align-items: center;
         padding: 1em 0 0;
     }
 
-    .hearts-conteiner__article {
+    .hearts-container__article {
         width: 100%;
         margin-top: 18px;
     }
@@ -211,8 +369,235 @@
         width:50%;
     }
 
-    .hearts-figure__sticker1 {
+    .hearts-figure__sticker1,
+    .volunteering-figure__sticker {
         border-width: 10px;
+    }
+
+    .options-help__container {
+        padding: 19px 30px 26px;
+    }
+
+    .options-help__box {
+        justify-content: center;
+    }
+
+    .options-help__icon {
+        width: 80px;
+        height: 80px;
+        background-size: cover;
+    }
+
+    .options-help__item {
+        flex-basis: 142px;
+    }
+
+    .options-help__title {
+        line-height: 133%;
+        font-size: 1.125rem;
+    }
+
+    .banner__icon_type1 {
+        width: 54px;
+        height: 52px;
+        background-size: cover;
+    }
+
+    .banner__icon_type2 {
+        width: 48px;
+        height: 35px;
+        background-size: cover;
+    }
+
+    .banner__icon_type3 {
+        width: 46px;
+        height: 38px;
+        background-size: cover;
+    }
+
+    .banner__icon_type4 {
+        width: 44px;
+        height: 43px;
+        background-size: cover;
+    }
+
+    .banner__icon_type5 {
+        width: 30px;
+        height: 41px;
+        background-size: cover;
+    }
+
+    .shelter__container {
+        flex-direction: column;
+        padding: 11px 50px 26px;
+        align-items: center;
+
+    }
+
+    .shelter__article {
+        max-width: 100%;
+    }
+
+    .shelter-article__title,
+    .volunteering-article__title {
+        text-align: center;
+    }
+
+    .pets__title {
+        font-size: 1.25rem;
+        line-height: 120%;
+    }
+
+    #pets-card_4 {
+        display: none;
+    }
+    #pets-card_5 {
+        display: none;
+    }
+    #pets-card_6 {
+        display: none;
+    }
+
+    .pets__catalog {
+        max-width: 304px;
+        grid-template-areas: 
+        "a"
+        "b"
+        "c";
+        row-gap: 22px;
+    }
+
+    .button-card__text {
+        font-size: 1.125rem;
+        line-height: 222%;
+    }
+
+    .button-card_yellow {
+        width: 174px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .button-card_transparent {
+        width: 242px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pets-social-networks {
+        flex-direction: column;
+        max-width: 60vw;
+        padding: 0 0 26px;
+    }
+
+    .pets-social-networks__icons {
+        width: 112px;
+    }
+
+    .charity-container__info {
+        flex-direction: column;
+    }
+
+    .charity-info {
+        width: 100%;
+    }
+
+    .charity-container__head {
+        padding: 0;
+    }
+    
+    .button-payment_position,
+    .button-autohelp,
+    .button-volunteering {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 16px auto;
+        width: 194px;
+        height: 30px;
+    }
+
+    .charity-info__title {
+        font-size: 1.25rem;
+        line-height: 120%;
+    }
+
+    .essentials-container,
+    .autohelp-container,
+    .news-container,
+    .about-container  {
+        max-width: 60vw;
+        padding: 16px 0 24px;
+    }
+
+    .review-pets__link {
+        display: flex;
+        justify-content: center;
+    }
+
+    .autohelp-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .volunteering-article {
+        width: 100%;
+        padding-bottom: 16px;
+    }
+
+    .volunteering-figure {
+        width: 54%;
+    }
+
+    .about-information__title {
+        font-size: 1.125rem;
+        line-height: 117%;
+    }   
+
+    .about-information-text-socials {
+        font-size: 1rem;
+    }
+
+    .thanks-wrapper {
+        background: url('./assets/image/36164_3.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 360px;
+    }
+
+    .thanks-container {
+        padding-top: 11vw;
+        padding-left: 6.9vw;
+    }
+
+    .thanks-content {
+        max-width: 212px;
+    }
+
+    .thanks-content__icon {
+        background: url('./assets/icon/foundation_paw\(360\).svg');
+        width: 42px;
+        height: 42px;
+    }
+
+    .thanks-content__text {
+        font-size: 1.875rem;
+        padding: 2.27em 0;
+    }
+
+    .footer__list {
+        max-width: 60vw;
+        column-gap: 0;
+        row-gap: 20px;
+        flex-direction: column;
+        align-content: space-between;
+        max-height: 207px;
     }
 }
 
@@ -225,7 +610,7 @@
         padding: 0 30px;
     }
 
-    .header-conteiner::after {
+    .header-container::after {
         background: url('./assets/image/dog\ 3\(360\).jpg');
         width: 225px;
         height: 357px;
@@ -279,7 +664,7 @@
         top: 77vw;
     }
 
-    .hearts-conteiner {
+    .hearts-container {
         max-width: 83vw;
     }
 
@@ -288,4 +673,30 @@
         height: 192px;
     }
 
+    .shelter__container,
+    .about-container {
+        max-width: 100vw;
+        padding: 11px 30px 26px;
+    }
+
+    .charity-container,
+    .essentials-container,
+    .autohelp-container,
+    .volunteering-container,
+    .news-container,
+    .footer__list {
+        max-width: 100vw;
+        padding: 20px 30px;
+    }
+
+    .thanks-wrapper {
+        background: url('./assets/image/36164_4.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 267px;
+    }
+
+    .thanks-container {
+        padding-top: 6vw;
+    }
 }
