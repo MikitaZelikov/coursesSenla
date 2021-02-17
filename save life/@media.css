@@ -162,6 +162,20 @@
         column-gap: 68px;
     }
 
+    .all-pets__container {
+        margin: 0 auto;
+        display: grid;
+        max-width: 804px;
+        grid-template-areas: 
+        "a b"
+        "c d"
+        "e f"
+        "g h"
+        "i j"
+        "k l";
+        column-gap: 68px;
+    }
+
     .charity-container {
         max-width: 60vw;
         padding: 20px;
@@ -223,7 +237,26 @@
     }
 }
 
-
+@media (max-width: 1023px) {
+    .all-pets__container {
+        margin: 0 auto;
+        display: grid;
+        max-width: 368px;
+        grid-template-areas: 
+        "a" 
+        "b"
+        "c" 
+        "d"
+        "e"
+        "f"
+        "g" 
+        "h"
+        "i" 
+        "j"
+        "k" 
+        "l";
+    }
+}
 
 
 @media (max-width: 767px) {

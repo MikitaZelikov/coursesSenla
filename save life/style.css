@@ -561,7 +561,7 @@ input, textarea, .form-autohelp-checkbox__title,
 .all-pets__container {
     margin: 0 auto;
     display: grid;
-    width: 83.9vw;
+    width: 1143px;
     grid-template-areas: 
     "a b c"
     "d e f"
@@ -569,6 +569,23 @@ input, textarea, .form-autohelp-checkbox__title,
     "j k l";
     column-gap: 21px;
     row-gap: 44px;
+}
+
+.all-pets__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1143px;
+    padding: 20px 40px;
+    column-gap: 40px;
+    margin: 0 auto;
+}
+
+.selection-form,
+.all-pets-head__link {
+    display: flex;
+    column-gap: 0.5em;
+    align-items: center;
 }
 
 .pets__card {
