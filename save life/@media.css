@@ -1,4 +1,5 @@
 @media (max-width: 1269px) {
+    
     .head {
         max-width: 44%;
         min-height: 50vw;  
@@ -226,6 +227,7 @@
 
 
 @media (max-width: 767px) {
+
     .header-container {
         padding: 24px 129px 0;
         justify-content: flex-end;
@@ -605,6 +607,7 @@
 
 
 @media (max-width: 639px) {
+
     .head {
         min-height: 480px;
         padding: 0 30px;

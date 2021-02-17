@@ -72,30 +72,8 @@ body {
 /* Icon, image, logo */
 
 .options-help__icon {
-    width: 150px;
-    height: 150px;
+    display: block;
     margin: 0 auto;
-    background-size: cover;
-}
-
-.options-help__icon_1 {
-    background: url('./assets/icon/Group\ 9.svg');
-}
-
-.options-help__icon_2 {
-    background: url('./assets/icon/Group\ 15.svg');
-}
-
-.options-help__icon_3 {
-    background: url('./assets/icon/Group\ 14.svg');
-}
-
-.options-help__icon_4 {
-    background: url('./assets/icon/Group\ 10.svg');
-}
-
-.options-help__icon_5 {
-    background: url('./assets/icon/Group\ 13.svg');
 }
 
 .header-container::after {
@@ -246,7 +224,8 @@ h2 {
 
 .review-pets__text {
     color: #AD7F00;
-    text-decoration-line: underline;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
 }
 
 .button-card__text_color,
@@ -604,7 +583,6 @@ input, textarea, .form-autohelp-checkbox__title,
     margin-inline: 0;
 }
 
-.button-card-container,
 .pets-card__text_name,
 .charity-container__title,
 .charity-container__text {
@@ -812,8 +790,17 @@ input, textarea, .form-autohelp-checkbox__title,
     border-radius: 58px;
     height: 42px;
     width: 223px;
-    text-align: center;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-payment_position {
@@ -837,6 +824,8 @@ input, textarea, .form-autohelp-checkbox__title,
 .button-payment__link,
 .head-button__link {
     text-decoration-line: none;
+    width: 100%;
+    text-align: center;
 }
 
 .form-shelter-head__button {
@@ -869,6 +858,159 @@ input, textarea, .form-autohelp-checkbox__title,
     border: 2px solid #FFC41E;
     color: #242424;
 }
+
+/* interactive elements */
+
+@media (min-width: 768px) {
+
+    .header-nav__link:hover {
+        font-weight: 700;
+        color: #000000;
+        text-decoration: underline;
+        text-underline-offset: 0.1em;
+    }
+
+    .footer__link:hover .footer__text,
+    .footer__link:hover {
+        color: #AD7F00;
+    }
+
+    .review-pets__link:hover .review-pets__text {
+        color: #523C00;
+    }
+
+    .head__button:hover,
+    .button-card:hover,
+    .button-payment:hover,
+    .button-autohelp:hover,
+    .button-volunteering:hover {
+        background: #FFDF86;
+        box-shadow: 0px 2px 4px #CCCCCC;
+        color: #000000;
+    }
+
+    .button-card_transparent:hover {
+        color: #000000;
+        background: #FFFFFF;
+        border: 3px solid #FFBC00;
+        box-shadow: 0px 2px 4px #CCCCCC;
+    }
+
+    .header-socials__link svg:hover {
+        fill: #FFD458;
+        box-shadow: 0px 4px 4px rgba(113, 113, 113, 0.2);
+    }
+
+    .pets-social-networks__link svg:hover {
+        fill: #FFFFFF;
+        box-shadow: 0px 2px 4px #CCCCCC;
+    }
+
+    .options-help__link:hover .options-help__icon {
+        background-color: #FFFFFF;
+    }
+}
+
+.options-help__link:active .options-help__icon {
+    background-color: #F8ECCB;
+}
+
+.footer__link {
+    text-underline-offset: 0.1em;
+}
+
+.review-pets__link {
+    margin-top: 1.5em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.header-nav__link:active {
+    color: #6B6B6B;
+}
+
+.header-nav__link:focus {
+    outline-style: solid;
+}
+
+.footer__link:active .footer__text,
+.footer__link:active {
+    color: #474747;
+}
+
+.footer__link:focus {
+    outline-style: solid;
+}
+
+.review-pets__link:active .review-pets__text {
+    color: #F6B400;
+}
+
+.review-pets__link:focus {
+    outline-style: solid;
+}
+
+.button-card:hover,
+.button-autohelp:hover,
+.button-volunteering:hover {
+    cursor: pointer;
+}
+
+.head__button:focus-within,
+.button-card:focus,
+.button-card_transparent:focus,
+.button-payment:focus-within,
+.button-autohelp:focus,
+.button-volunteering:focus {
+    border: 3px solid #6B6B6B;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.button-payment__link:focus,
+.head-button__link:focus {
+    outline: none;
+}
+
+.head__button:active,
+.button-card:active,
+.button-payment:active,
+.button-autohelp:active,
+.button-volunteering:active {
+    color: #000000;
+    background: #FFBB0C;
+    background-blend-mode: multiply;
+}
+
+.header-socials__link:focus svg circle,
+.pets-social-networks__link:focus svg circle {
+    stroke:#6B6B6B;
+    stroke-width: 3px;
+}
+
+.button-card_transparent:active {
+    color: #242424;
+    background: rgba(255, 196, 30, 0.2);
+    border: 3px solid #FFBC00;
+}
+
+.header-socials__link svg:active {
+    fill:#FFBC00;
+}
+
+.pets-social-networks__link svg:active {
+    fill: #F8ECCB;
+}
+
+.header-socials__link:focus,
+.pets-social-networks__link:focus {
+    outline: none;
+}
+
+svg {
+    border-radius: 50%;
+}
+
 
 
 /* form style */
