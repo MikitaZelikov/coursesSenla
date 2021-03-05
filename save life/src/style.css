@@ -360,6 +360,7 @@ input, textarea, .form-autohelp-checkbox__title,
 .form-shelter-head__title,
 .form-shelter__text_color {
     color: #B3B3B3;   
+    margin-block: 0;
 }
 
 /* Blocks markup */
@@ -848,18 +849,22 @@ input, textarea, .form-autohelp-checkbox__title,
 .form-shelter-head__button {
     background: url('./assets/icon/close.svg');
     background-size: cover;
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
+    padding: 0;
     border: none;
 }
 
 .form-shelter__button-submit {
-    background: #FFE28E;
+    background: #FBC832;
     border-radius: 58px;
     height: 42px;
     width: 168px;
     border: none;
-    color: #6B6B6B;
+    color: #242424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-shelter__button-submit_autohelp,
@@ -874,6 +879,9 @@ input, textarea, .form-autohelp-checkbox__title,
     width: 143px;
     border: 2px solid #FFC41E;
     color: #242424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* interactive elements */
@@ -900,13 +908,15 @@ input, textarea, .form-autohelp-checkbox__title,
     .button-card:hover,
     .button-payment:hover,
     .button-autohelp:hover,
-    .button-volunteering:hover {
+    .button-volunteering:hover,
+    .form-shelter__button-submit:hover {
         background: #FFDF86;
         box-shadow: 0px 2px 4px #CCCCCC;
         color: #000000;
     }
 
-    .button-card_transparent:hover {
+    .button-card_transparent:hover,
+    .form-shelter__button-cancel:hover {
         color: #000000;
         background: #FFFFFF;
         border: 3px solid #FFBC00;
@@ -969,7 +979,9 @@ input, textarea, .form-autohelp-checkbox__title,
 
 .button-card:hover,
 .button-autohelp:hover,
-.button-volunteering:hover {
+.button-volunteering:hover,
+.form-shelter__button-cancel:hover,
+.form-shelter__button-submit {
     cursor: pointer;
 }
 
@@ -1028,15 +1040,139 @@ svg {
     border-radius: 50%;
 }
 
+/* Forms style */
 
+.modal-window__shadow {
+    position: fixed;
+    border:none;
+    display: block;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 98;
+    transition: opacity 0.15s ease;
+    background: #000000;
+    opacity: 0.4; /* Переход будет начинаться с этого значения, равного 0*/
+}
 
-/* form style */
+/* .modal-window__shadow_show {
+    pointer-events: auto;
+    opacity: 0.4;
+} */
+
+.modal-window {
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;    
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 50px 0;
+    overflow: hidden;
+    overflow-y: auto;
+    /* background: #000000;
+    opacity: 0.4; */
+    z-index: 99;
+}
+
+/* .modal-window_active {
+    visibility: visible;
+} */
+
+.modal-window__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+@keyframes modal {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.form-shelter {
+    width: 525px;
+    max-width: 100%;
+    animation: modal 1s ease 0.1s;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 22px rgba(161, 161, 161, 0.25);
+    border-radius: 5px;
+    padding: 30px 40px;
+}
+
+.form-shelter__head {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+}
+
+.form-shelter__cutaway {
+    margin-inline: 0;
+    margin-block: 0;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.form-shelter__cutaway img {
+    border-radius: 50%;
+    height: 91px;
+}
+
+.form-shelter-cutaway__name {
+    margin-block: 0;
+    margin: 1rem 0 0.5rem;
+}
+
+.form-shelter-cutaway__sex-age {
+    margin-block: 0;
+    margin-bottom: 1rem;
+}
+
+.form-shelter__text {
+    margin-block: 0;
+}
+
+.form-shelter__text_color {
+    margin-top: 1rem;
+    padding-bottom: 0.375rem;
+}
 
 input, textarea {
+    width: 98%;
+    min-height: 40px;
     border: 1px solid #D6D6D6;
     border-radius: 2px;
     color: #6B6B6B;
     opacity: 0.7;
+    resize: none;
+}
+
+.input-text {
+    margin: 2rem 0 1rem;
+}
+
+.textarea {
+    margin: 1.375rem 0 1.5rem;
+    resize: none;
 }
 
 label {
@@ -1052,6 +1188,13 @@ label {
 .form-shelter__contacts {
     font-size: 0.875rem;
     color: #474747;
+    margin-block: 0;
+}
+
+.form-shelter__box-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
 }
 
 .label-input-top {
@@ -1065,6 +1208,37 @@ label {
 .form-autohelp-checkbox__list {
     list-style-type: none;
     padding-inline-start: 0;
+}
+
+.form-autohelp-checkbox__title {
+    margin-block: 0;
+}
+
+.form-autohelp-checkbox,
+.form-volunteering-radio {
+    margin: 1.375rem 0 2rem;
+}
+
+.autohelp-checkbox {
+    width: 1rem;
+    min-height: 1rem;
+    background: #FFFFFF;
+    border: 1px solid #F9B800;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 4px rgba(113, 113, 113, 0.05), 
+    inset 3px 3px 2px rgba(189, 188, 188, 0.24);
+    border-radius: 2px;
+    opacity: 1;
+}
+
+.volunteering-radio {
+    width: 1rem;
+    min-height: 1rem;
+    background: #FFFFFF;
+    border: 1px solid #F9B800;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 4px rgba(113, 113, 113, 0.05), 
+    inset 3px 3px 2px rgba(189, 188, 188, 0.24);
 }
 
 @keyframes dog_fly {
@@ -1091,3 +1265,6 @@ label {
 .head::after {
     animation: cat_fly 1.5s ease-out;
 }
+
+
+

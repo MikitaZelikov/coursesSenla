@@ -6,51 +6,64 @@
     <title>ВОЛОНТЕРСТВО</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <script src="./assets/jquery.min.js"></script>
+    <script src="./assets/jquery.maskedinput.min.js"></script>
 </head>
 <body>
-    <form class="form-shelter" action="index.html" method="POST">
+    <div class="modal-window modal-window_active">
+        <div class="modal-window__wrapper">
+            <form class="form-shelter" action="index.html" method="POST">
 
-        <div class="form-shelter__head form-shelter-head">
-            <h2 class="form-shelter-head__title">Волонтерство</h2>
-            <button class="form-shelter-head__button">
-                <span></span>
-            </button>
-        </div>
+                <div class="form-shelter__head form-shelter-head">
+                    <h2 class="form-shelter-head__title">Волонтерство</h2>
+                    <button class="form-shelter-head__button">
+                        <span></span>
+                    </button>
+                </div>
+                
+                <p class="form-shelter-cutaway__name">
+                    Заявка
+                </p>
+
+                <p class="form-shelter__text">
+                    Отправьте нам заявку о том, что готовы помочь. Когда нам будет<br>
+                    необходима помощь, мы позвоним вам.
+                </p>
         
-        <p class="form-shelter-cutaway__name">
-            Заявка
-        </p>
-     
-        <p class="form-shelter__text">
-            Отправьте нам заявку о том, что готовы помочь. Когда нам будет<br>
-            необходима помощь, мы позвоним вам.
-        </p>
-
-        <div class="form-shelter__box-input">
-            <label class="label-input-top" for="name">Фамилия и имя</label>
-            <br>
-            <input class="input-text" type="text" id="name" name="username" placeholder="Введите ваше имя и фамилию" minlength="2" maxlength="56" pattern="[А-Яа-яЁё\s|a-zA-Z\s]{2,56}">
-            <br>
-            <label class="label-input-top" for="phone">Номер телефона (только белорусский номер)</label>
-            <br>
-            <input class="input-tel" type="tel" id="phone" name="usernumber" placeholder="Введите ваш номер телефона" pattern="\d{9}" maxlength="9" required>
-            <br>
-            <label for="phone">Обязательное поле для заполнения</label>
-        </div>
-
-        <div class="form-volunteering-radio">
-            <label class="form-autohelp-checkbox__label-item"><input type="radio" id="volunteering" value="volunteering" name="volunteering" checked>Хочу помогать на постоянной основе (расписание<br>можно подобрать так, как будет удобно для всех)</label>
-            <br>
-            <label class="form-autohelp-checkbox__label-item"><input type="radio" id="volunteering" value="volunteering" name="volunteering">Готов помогать иногда. Хочу выбрать удобное для меня<br>время</label>
-        </div>
-
-        <label class="label-input-top" for="comment">Замечания</label>
-        <br>
-        <textarea name="usercomment" id="comment" cols="25" rows="3" placeholder="Опишите, как вы сможете нам помочь и удобное время для вас" maxlength="500"></textarea>
+                <div class="form-shelter__box-input">
+                    <!-- <label class="label-input-top" for="name">Фамилия и имя</label>
+                    <br> -->
+                    <input class="input-text" type="text" id="name" name="username" placeholder="    Фамилия и имя" minlength="2" maxlength="56" pattern="[А-Яа-яЁё\s|a-zA-Z\s]{2,56}">
+                    <!-- <br>
+                    <label class="label-input-top" for="phone">Номер телефона (только белорусский номер)</label> -->
+                    <br>
+                    <input class="input-tel" type="tel" id="phone" name="usernumber" placeholder="    Номер телефона" pattern="\d{9}" maxlength="9" required>
+                    <script>
+                        $(function() {
+                        $.mask.definitions['0']='[0-9]';
+                        $("#phone").mask("    +375 (00) 00 000 00", {placeholder: "0" });
+                        });
+                    </script>
+                    <br>
+                    <label for="phone">Обязательное поле для заполнения</label>
+                </div>
         
-        <div class="form-shelter__box-button">
-            <button class="form-shelter__button-submit form-shelter__button-submit_volunteering" type="submit">Отправить заявку</button>
-            <button class="form-shelter__button-cancel">Отмена</button>
+                <div class="form-volunteering-radio">
+                    <label class="form-autohelp-checkbox__label-item"><input class="volunteering-radio" type="radio" id="volunteering" value="volunteering" name="volunteering" checked> Хочу помогать на постоянной основе (расписание<br>можно подобрать так, как будет удобно для всех)</label>
+                    <br>
+                    <label class="form-autohelp-checkbox__label-item"><input class="volunteering-radio" type="radio" id="volunteering" value="volunteering" name="volunteering"> Готов помогать иногда. Хочу выбрать удобное для меня<br>время</label>
+                </div>
+        
+                <!-- <label class="label-input-top" for="comment">Замечания</label>
+                <br> -->
+                <textarea name="usercomment" id="comment" cols="25" rows="4" placeholder="    Опишите, как вы сможете нам помочь и удобное время для вас" maxlength="500"></textarea>
+                
+                <div class="form-shelter__box-button">  
+                    <button class="form-shelter__button-submit form-shelter__button-submit_volunteering" type="submit">Отправить заявку</button>
+                    <button class="form-shelter__button-cancel">Отмена</button>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
+    <div class="modal-window__shadow modal-window__shadow_show"></div>
 </body>
