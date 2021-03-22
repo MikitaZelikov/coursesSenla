@@ -5,8 +5,8 @@
     font-style: normal;
     font-weight: 700;
     src: local(''),
-         url(./assets/fonts/Gilroy-Bold.woff) format('woff'),
-         url(./assets/fonts/gilroy-bold.woff2) format('woff2');
+         url(/src/assets/fonts/Gilroy-Bold.woff) format('woff'),
+         url(/src/assets/fonts/gilroy-bold.woff2) format('woff2');
 }
 
 @font-face {
@@ -14,8 +14,8 @@
     font-style: normal;
     font-weight: 600;
     src: local(''),
-         url(./assets/fonts/Gilroy-SemiBold.woff) format('woff'),
-         url(./assets/fonts/gilroy-semibold.woff2) format('woff2');
+         url(/src/assets/fonts/Gilroy-SemiBold.woff) format('woff'),
+         url(/src/assets/fonts/gilroy-semibold.woff2) format('woff2');
 }
 
 @font-face {
@@ -23,8 +23,8 @@
     font-style: normal;
     font-weight: 500;
     src: local(''),
-         url(./assets/fonts/Gilroy-Medium.woff) format('woff'),
-         url(./assets/fonts/gilroy-medium.woff2) format('woff2');
+         url(/src/assets/fonts/Gilroy-Medium.woff) format('woff'),
+         url(/src/assets/fonts/gilroy-medium.woff2) format('woff2');
 }
 
 @font-face {
@@ -32,8 +32,8 @@
     font-style: normal;
     font-weight: 400;
     src: local(''),
-         url(./assets/fonts/Gilroy-Regular.woff) format('woff'),
-         url(./assets/fonts/gilroy-regular.woff2) format('woff2');
+         url(/src/assets/fonts/Gilroy-Regular.woff) format('woff'),
+         url(/src/assets/fonts/gilroy-regular.woff2) format('woff2');
 }
 
 @font-face {
@@ -41,8 +41,8 @@
     font-style: normal;
     font-weight: 300;
     src: local(''),
-         url(./assets/fonts/Gilroy-Light.woff) format('woff'),
-         url(./assets/fonts/Gilroy-Light.woff2) format('woff2');
+         url(/src/assets/fonts/Gilroy-Light.woff) format('woff'),
+         url(/src/assets/fonts/Gilroy-Light.woff2) format('woff2');
 }
 
 /* Color background blocks */
@@ -80,7 +80,7 @@ body {
     content: "";
     position: absolute;
     z-index: -1;
-    background: url('./assets/image/dog\ 1.jpg');
+    background: url('/src/assets/image/dog\ 1.jpg');
     width: 718px;
     height: 713px;
     top: 0;
@@ -91,7 +91,7 @@ body {
     content: "";
     position: absolute;
     z-index: 1;
-    background: url('./assets/image/cat\ 1.png');
+    background: url('/src/assets/image/cat\ 1.png');
     width: 483px;
     height: 469px;
     top: 330px;
@@ -99,7 +99,7 @@ body {
 }
 
 .head__watermark_1 {
-    background: url('./assets/image/Я\ буду.png');
+    background: url('/src/assets/image/Я\ буду.png');
     width: 599px;
     height: 192px;
     left: 0;
@@ -107,7 +107,7 @@ body {
 }
 
 .head__watermark_2 {
-    background: url('./assets/image/лучшим.png');
+    background: url('/src/assets/image/лучшим.png');
     width: 534px;
     height: 107px;
     left: 0;
@@ -115,7 +115,7 @@ body {
 }
 
 .head__watermark_3 {
-    background: url('./assets/image/другом.png');
+    background: url('/src/assets/image/другом.png');
     width: 474px;
     height: 107px;
     left: 296px;
@@ -123,44 +123,44 @@ body {
 }
 
 .banner__icon_type1 {
-    background: url('./assets/icon/Group\ 1.svg');
+    background: url('/src/assets/icon/Group\ 1.svg');
     width: 148.41px;
     height: 144.38px;
 }
 
 .banner__icon_type2 {
-    background: url('./assets/icon/Group\ 2.svg');
+    background: url('/src/assets/icon/Group\ 2.svg');
     width: 131px;
     height: 95px;
 }
 
 .banner__icon_type3 {
-    background: url('./assets/icon/Group\ 3.svg');
+    background: url('/src/assets/icon/Group\ 3.svg');
     width: 127px;
     height: 100px;
 }
 
 .banner__icon_type4 {
-    background: url('./assets/icon/Group\ 4.svg');
+    background: url('/src/assets/icon/Group\ 4.svg');
     width: 118px;
     height: 115px;
 }
 
 .banner__icon_type5 {
-    background: url('./assets/icon/Group\ 5.svg');
+    background: url('/src/assets/icon/Group\ 5.svg');
     width: 82px;
     height: 110px;
 }
 
 .thanks-wrapper {
-    background: url('./assets/image/36164_1.jpg');
+    background: url('/src/assets/image/36164_1.jpg');
     background-size: cover;
     width: 100%;
     height: 741px;
 }
 
 .thanks-content__icon {
-    background: url('./assets/icon/foundation_paw.svg');
+    background: url('/src/assets/icon/foundation_paw.svg');
     width: 89px;
     height: 89px;
     margin-top: 50%;
@@ -436,7 +436,7 @@ input, textarea, .form-autohelp-checkbox__title,
 
 .hearts-figure__sticker1 {
     position: relative;
-    background: url('./assets/image/Ellipse\ 25.png');
+    background: url('/src/assets/image/Ellipse\ 25.png');
     background-size: cover;
     border: solid #FFC41E 25px;
     border-radius: 50%;
@@ -451,7 +451,7 @@ input, textarea, .form-autohelp-checkbox__title,
 
 .hearts-figure__sticker2 {
     position: absolute;
-    background: url('./assets/image/Ellipse\ 39.png');
+    background: url('/src/assets/image/Ellipse\ 39.png');
     background-size: cover;
     border: solid #FFC41E 8px;
     border-radius: 50%;
@@ -688,7 +688,7 @@ input, textarea, .form-autohelp-checkbox__title,
 
 .volunteering-figure__sticker {
     position: relative;
-    background: url('./assets/image/Ellipse\ 27.png');
+    background: url('/src/assets/image/Ellipse\ 27.png');
     background-size: cover;
     border: solid #FFC41E 25px;
     border-radius: 50%;
@@ -846,7 +846,7 @@ input, textarea, .form-autohelp-checkbox__title,
 }
 
 .form-shelter-head__button {
-    background: url('./assets/icon/close.svg');
+    background: url('/src/assets/icon/close.svg');
     background-size: cover;
     width: 24px;
     height: 24px;
@@ -1067,3 +1067,27 @@ label {
     padding-inline-start: 0;
 }
 
+@keyframes dog_fly {
+    from {
+        left: -1158px;
+    }
+    to {
+        left: 110px;
+    }
+}
+
+@keyframes cat_fly {
+    from {
+        top: -600px;
+    }
+    to {
+        top: 330px;
+    }
+}
+
+.header-container::after {
+    animation: dog_fly 1.5s ease-out;
+}
+.head::after {
+    animation: cat_fly 1.5s ease-out;
+}
