@@ -1,4 +1,5 @@
 'use strict';
+let res;
 // В строке "Я стану крутым программистом" сделать первую букву каждого слова в верхнем регистре".
 function upperFirst(str) {
     let resultStr = '';
@@ -9,9 +10,10 @@ function upperFirst(str) {
             resultStr += str[i];
         }
     }
-    console.log(resultStr);
+    return resultStr;
 }
-upperFirst("Я стану крутым программистом");
+res = upperFirst("Я стану крутым программистом");
+console.log(res);
 
 // Вычислить факториал числа 9.
 function factorial(x) {
@@ -19,9 +21,10 @@ function factorial(x) {
     for (let i = 1; i <= x; i++) {
         resultFact *= i;
     }
-    console.log(resultFact);
+    return resultFact;
 }
-factorial(9);
+res = factorial(9);
+console.log(res);
 
 // Создать строку "Просветление наступит через: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1".
 function createString(str) {
@@ -33,9 +36,10 @@ function createString(str) {
             resultStr += ` ${j},`;
         }
     }
-    console.log(resultStr);
+    return resultStr;
 }
-createString("Просветление наступит через:");
+res = createString("Просветление наступит через:");
+console.log(res);
 
 // Найти и вывести в консоль все нечетные числа от 1 до 20 включительно.
 function odd(y) {
@@ -47,11 +51,13 @@ function odd(y) {
             result +=  `${k}. `;
         }
     }
-    console.log(result);
+    return result;
 }
-odd(20);
+res = odd(20);
+console.log(res);
 
-// На основе строки "теперь я мастер циклов javascript" создать новую строку, где первые буквы каждого слова будут в верхнем регистре и будут отсутствовать пробелы.
+/* На основе строки "теперь я мастер циклов javascript" создать новую строку, где первые буквы каждого слова будут 
+в верхнем регистре и будут отсутствовать пробелы. */
 function stringCamelCase(str) {
     let resultStr = '';
     for (let i = 0; i < str.length; i++) {
@@ -61,6 +67,7 @@ function stringCamelCase(str) {
             resultStr += str[i].toUpperCase();
         } else resultStr += str[i];
     }
-    console.log(resultStr);
+    return resultStr;
 }
-stringCamelCase('теперь я мастер циклов javascript');
+res = stringCamelCase('теперь я мастер циклов javascript');
+console.log(res);

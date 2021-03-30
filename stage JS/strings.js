@@ -2,7 +2,7 @@
 let string = 'string test example';
 
 // Получить первую и последнюю букву строки;
-console.log(`${string.charAt(0)} & ${string.charAt(string.length - 1 )}`);
+console.log(`первая: ${string.charAt(0)}, последняя: ${string.charAt(string.length - 1 )}`);
 
 // Сделать первую и последнюю буквы в верхнем регистре;
 console.log(string[0].toUpperCase() + string.substring(1, string.length - 1) + string[string.length - 1].toUpperCase());

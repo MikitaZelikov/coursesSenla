@@ -11,9 +11,10 @@ console.log(+Math.random().toFixed(2));
 
 // С помощью Math.random получить случайное число от 0 до Х;
 function randomDiapason(x) {
-    console.log(Math.random() * x);
+    return Math.random() * x;
 }
-randomDiapason(15);
+let res = randomDiapason(15);
+console.log(res);
 
 // Получить число из строки '100$';
 console.log(parseInt('100$', 10));
