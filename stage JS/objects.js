@@ -14,4 +14,4 @@ obj.details = {
     color: '#C0C0C0',
 }
 
-console.log(obj);
+console.log('Создать объект с требуемыми полями:', obj);
