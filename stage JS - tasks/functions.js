@@ -37,8 +37,10 @@ function reverseString(str) {
         return result;
     } else return 'Ошибка! Параметр функции не является строкой';
 }
-res = reverseString('Gravity Falls');
-console.log(`(Задание 3) Перевернутая строка имеет вид: '${res}'`);
+let string = 'Gravity Falls';
+res = reverseString(string);
+console.log(`(Задание 3) Перевернутая строка имеет вид (вариант 1): '${res}'`);
+console.log('(Задание 3) Перевернутая строка имеет вид (вариант 2):', string.split('').reverse().join(''));
 
 // Написать функцию, которая проверяет является ли слово палиндромом.
 function isItPalindrome(str) {
@@ -50,7 +52,13 @@ function isItPalindrome(str) {
     } else return 'Ошибка! Параметр функции не является строкой';
 }
 res = isItPalindrome('шалаш');
-console.log('(Задание 4) Палиндром или нет:', res);
+console.log('(Задание 4) Палиндром или нет (вариант 1):', res);
+
+function isItPalindrome1(str) {
+    if (str === str.split('').reverse().join('')) return `Слово '${str}' является палиндромом`;
+}
+res = isItPalindrome1('ghytyhg');
+console.log('(Задание 4) Палиндром или нет (вариант 2):', res);
 
 /* Создать функцию, которая в качестве аргумента принимает строку из букв и возвращает строку,
 где каждый символ разделен пробелом и заменён на значение символа из юникода. ((hello) => "104 101 108 108 111") */

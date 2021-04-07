@@ -49,7 +49,19 @@ function deleteFirstElement(...args) {
     } else return 'Ошибка! Один из параметров функции - не массив!';
 }
 res = deleteFirstElement([1, 2, 3], ["x", "y", "z"], [null, undefined, ''], [], ["x"], [["4"], "5", "6"], [{size: 48}, 9, {weight: 77}]);
-console.log('(Задание 4) Массив оставшихся значений:', res);
+console.log('(Задание 4) Массив оставшихся значений (вариант 1):', res);
+
+function deleteFirstElement1(...args) {
+    let localParam = args.slice();
+    if (localParam.filter(a => !Array.isArray(a)).length === 0) {
+        for (let current of localParam) {
+            current.splice(0, 1);
+        }
+        return localParam;
+    } else return 'Ошибка! Один из параметров функции - не массив!';
+}
+res = deleteFirstElement1([1, 2, 3], ["x", "y", "z"], [null, undefined, ''], [], ["x"], [["4"], "5", "6"], [{size: 48}, 9, {weight: 77}]);
+console.log('(Задание 4) Массив оставшихся значений (вариант 2):', res);
 
 // Создать функцию, которая упорядочит буквы в строке "екважбигёзд" в алфавитном порядке и возвратит строку в обратном порядке ("кизжёедгвба").
 function sortReverseString(str) {
@@ -63,7 +75,9 @@ function sortReverseString(str) {
     } else return 'Ошибка! Неправильный тип данных у параметра функции!';
 }
 res = sortReverseString("екважбигёзд");
-console.log('(Задание 5) Буквы строки в обратном алфавитном порядке:', res);
+console.log('(Задание 5) Буквы строки в обратном алфавитном порядке (вариант 1):', res);
+res = 'екважбигёзд'.split('').sort(new Intl.Collator('ru').compare).reverse().join('');
+console.log('(Задание 5) Буквы строки в обратном алфавитном порядке (вариант 2):', res);
 
 // Используя функцию, отсортировать массив [5, 2, -1, 6, 9, -9, 3] в обратном порядке.
 function sortWaning(arr) {

@@ -70,4 +70,11 @@ function stringCamelCase(str) {
     return resultStr;
 }
 res = stringCamelCase('теперь я мастер циклов javascript');
-console.log('(Задание 5) Создать новую строку, где первые буквы каждого слова будут в верхнем регистре и будут отсутствовать пробелы:', res);
+console.log('(Задание 5) Создать новую строку, где первые буквы каждого слова будут в верхнем регистре и будут отсутствовать пробелы (вариант 1):', res);
+
+function stringCamelCaseEasy(str) {
+    let resultStr = str.split(' ').map(a => a[0].toUpperCase() + a.substring(1)).join('');
+    return resultStr;
+}
+res = stringCamelCaseEasy('теперь я мастер циклов javascript');
+console.log('(Задание 5) Создать новую строку, где первые буквы каждого слова будут в верхнем регистре и будут отсутствовать пробелы (вариант 2):', res);
