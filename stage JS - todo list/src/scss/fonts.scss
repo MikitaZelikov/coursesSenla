@@ -1,0 +1,9 @@
+/* Local fonts */
+
+@font-face {
+    font-family: 'Salesforce Sans';
+    font-style: Regular;
+    src: local(''),
+         url('../assets/fonts/SalesforceSans-Regular.woff') format('woff'),
+         url('../assets/fonts/SalesforceSans-Regular.woff2') format('woff2');
+}
