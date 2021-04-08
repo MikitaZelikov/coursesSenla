@@ -4,9 +4,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>To Do List</title>
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
+        <link rel="stylesheet" href="./style.scss">
     </head>
     <body>
-        
+        <main class="content">
+            <div class="content__wrapper">
+                <img src="./assets/image/taking_notes.svg" alt="Человек в костюме развешивает записки на доске">
+            </div>
+            <section class="container">
+                <header class="container__head">
+                    <svg></svg>
+                    <form class="container__form-search" action="">
+                        <input class="container__input-search" type="text">
+                    </form>
+                    <nav class="container__nav container-nav">
+                        <div class="container-nav__item"></div>
+                        <div class="container-nav__item"></div>
+                        <div class="container-nav__item"></div>
+                    </nav>
+                </header>
+                <form action="container__form-task">
+                    <label for="">
+                        <input class="container__input-task" type="text">
+                    </label>
+                    <button class="container__button-task"></button>
+                </form>
+                <ul class="container__list container-list">
+                    <li class="container-list__item"></li>
+                </ul>
+            </section>
+        </main>
     </body>
 </html>
