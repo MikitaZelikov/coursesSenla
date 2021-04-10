@@ -1,0 +1,33 @@
+@media (max-width: 1279px) {
+    .container__input-search {
+        height: 1.625rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .container {
+        width: 75%;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+
+        &__input-search {
+            height: 1.375rem;
+            font-size: 0.875rem;
+        }
+        
+        &__button-task {
+            font-size: 0.75rem;
+        }
+    }
+
+    .container-nav__item, 
+    textarea {
+        font-size: 0.875rem;
+    }
+}
+

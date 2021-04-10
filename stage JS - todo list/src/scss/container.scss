@@ -1,0 +1,119 @@
+.container {
+    position: relative;
+    width: 53%;
+    margin-left: 2.7%;
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__logo {
+        width: 23%;
+        position: absolute;
+        padding: 3%;
+        margin-left: -5%;
+    }
+
+    &__form-search {
+        padding-left: 23%;
+        padding-top: 3%;
+    }
+    
+    &__input-search {
+        height: 2.5rem;
+        width: 100%;
+        background: url('../assets/image/Search.svg') 3% center no-repeat;
+        background-color: #f5f5f5;
+        padding-left: 13%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        border: 1px solid #E2E2E2;
+        box-sizing: border-box;
+        box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+
+    &__nav {
+        display: flex;
+        margin: 4.5% 0;
+        border-top: solid 1px #E2E2E2;
+    }
+
+    &__form-task {
+        display: flex;
+        flex-direction: column;
+        font-family: Salesforce Sans;
+        color: #706E6B;
+
+        & label {
+            font-size: 0.75rem;
+        }
+    }
+
+    &__button-task {
+        display: flex;
+        align-self: flex-end;
+        width: 25%;
+        margin: 1.5% 0 3%;
+        font-size: 0.875rem;
+        letter-spacing: 0.75px;
+        color: #FFFFFF;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+        padding: 0.7em;
+        justify-content: center;
+        background: #2F80ED;
+        border-style: none;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+            background: #6d9fe0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2em;
+        margin-block: 0;
+        padding-inline-start: 0;
+        list-style-type: none;
+    }
+}
+
+textarea {
+    background: #FFFFFF;
+    border: 1px solid #DDDBDA;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0.5em;
+}
+
+.container-nav__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    font-weight: 900;
+    color: #53565A;
+    opacity: 0.5;
+    height: 3em;
+    padding-top: 1em;
+    width: 11em;
+    box-sizing: border-box;
+
+    &:hover {
+        border-top: solid 4px #2F80ED;
+        opacity: 1;
+        padding-top: calc(1em - 4px);
+    }
+}
+
+li {
+    flex-grow: 1;
+    background-color: lightcoral;
+    
+}
