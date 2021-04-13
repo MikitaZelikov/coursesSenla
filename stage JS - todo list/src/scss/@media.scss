@@ -8,6 +8,10 @@
     .container {
         width: 75%;
     }
+
+    li {
+        height: 7.8vw;
+    }
 }
 
 @media (max-width: 767px) {
@@ -26,8 +30,19 @@
     }
 
     .container-nav__item, 
-    textarea {
+    textarea {  
         font-size: 0.875rem;
     }
+
+    .delete-btn {
+        height: 5.2vw;
+        width: 5.2vw;
+        background-size: cover;
+    }
+
+    .important-btn {
+        font-size: 0.75rem;
+    }
+
 }
 

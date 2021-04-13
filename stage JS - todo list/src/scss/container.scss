@@ -77,7 +77,8 @@
     &__list {
         display: flex;
         flex-direction: column;
-        row-gap: 2em;
+        row-gap: 1em;
+        padding-bottom: 1em;
         margin-block: 0;
         padding-inline-start: 0;
         list-style-type: none;
@@ -113,7 +114,76 @@ textarea {
 }
 
 li {
-    flex-grow: 1;
-    background-color: lightcoral;
-    
+    display: flex;
+    justify-content: flex-end;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    height: 5em;
+    padding: 0.5em;
+
+    &:hover {
+        border: 1px solid rgba(47, 128, 237, 0.5);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+        padding: calc(0.5em - 1px);
+        cursor: pointer;
+    }
+
+    &:hover button {
+        visibility: visible;
+    }
 }
+
+.important-btn {
+    visibility: hidden;
+    width: 24%;
+    height: 2.5em;
+    margin-left: 7%;
+    background-color: #59e784;
+    border: none;
+    border-radius: 1.25em;
+    font-size: 0.875rem;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+
+    &:hover {
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+        background-color: #82f3a4;
+    }
+
+    &:focus {
+        outline: none;
+        border: 2px solid #464444;
+    }
+}
+
+.delete-btn {
+    visibility: hidden;
+    width: 36px;
+    height: 36px;
+    margin-left: 3%;
+    border-radius: 50%;
+    background:  url('../assets/image/Delete.svg') rgba(196, 196, 196, 0.5) no-repeat center;
+    border: none;
+
+    &:hover {
+        box-shadow: 0px 3px 6px rgba(10, 10, 10, 0.5);
+    }
+
+    &:active {
+        background-color: #e98282;
+    }
+
+    &:focus {
+        outline: none;
+        border: 2px solid #464444;
+    }
+}
+
