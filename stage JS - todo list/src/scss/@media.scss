@@ -1,48 +1,46 @@
 @media (max-width: 1279px) {
-    .container__input-search {
-        height: 1.625rem;
-    }
+  .container__input-search {
+    height: 1.625rem;
+  }
 }
 
 @media (max-width: 1023px) {
-    .container {
-        width: 75%;
-    }
+  .container {
+    width: 75%;
+  }
 
-    li {
-        height: 7.8vw;
-    }
+  li {
+    height: 7.8vw;
+  }
 }
 
 @media (max-width: 767px) {
-    .container {
-        width: 90%;
-        margin: 0 auto;
+  .container {
+    width: 90%;
+    margin: 0 auto;
 
-        &__input-search {
-            height: 1.375rem;
-            font-size: 0.875rem;
-        }
-        
-        &__button-task {
-            font-size: 0.75rem;
-        }
+    &__input-search {
+      height: 1.375rem;
+      font-size: 0.875rem;
     }
 
-    .container-nav__item, 
-    textarea {  
-        font-size: 0.875rem;
+    &__button-task {
+      font-size: 0.75rem;
     }
+  }
 
-    .delete-btn {
-        height: 5.2vw;
-        width: 5.2vw;
-        background-size: cover;
-    }
+  .container-nav__item,
+  textarea {
+    font-size: 0.875rem;
+  }
 
-    .important-btn {
-        font-size: 0.75rem;
-    }
+  .delete-btn {
+    height: 5.2vw;
+    width: 5.2vw;
+    background-size: cover;
+  }
 
+  .important-btn {
+    font-size: 0.75rem;
+  }
 }
-

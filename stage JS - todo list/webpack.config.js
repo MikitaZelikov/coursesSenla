@@ -6,7 +6,7 @@ module.exports = ({ production } = {}) => ({
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -20,23 +20,23 @@ module.exports = ({ production } = {}) => ({
       },
       {
         test: /\.(png|jpg|gif)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
       },
       {
         test: /\.html$/i,
         loader: 'html-loader',
-      }
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/index.html'),
-      filename: 'index.html'
-    })
+      filename: 'index.html',
+    }),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000
-  }
+    port: 9000,
+  },
 });

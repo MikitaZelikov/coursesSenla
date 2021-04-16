@@ -1,234 +1,235 @@
 .container {
-    position: relative;
-    width: 53%;
-    margin-left: 2.7%;
+  position: relative;
+  width: 53%;
+  margin-left: 2.7%;
 
-    &__head {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+  &__head {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__logo {
+    width: 23%;
+    position: absolute;
+    padding: 3%;
+    margin-left: -5%;
+  }
+
+  &__form-search {
+    padding-left: 23%;
+    padding-top: 3%;
+  }
+
+  &__input-search {
+    height: 2.5rem;
+    width: 100%;
+    background: url("../assets/image/Search.svg") 3% center no-repeat;
+    background-color: #f5f5f5;
+    padding-left: 13%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    border: 1px solid #e2e2e2;
+    box-sizing: border-box;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+
+  &__nav {
+    display: flex;
+    margin: 4.5% 0;
+    border-top: solid 1px #e2e2e2;
+  }
+
+  &__form-task {
+    display: flex;
+    flex-direction: column;
+    font-family: Salesforce Sans;
+    color: #706e6b;
+
+    & label {
+      font-size: 0.75rem;
     }
+  }
 
-    &__logo {
-        width: 23%;
-        position: absolute;
-        padding: 3%;
-        margin-left: -5%;
+  &__button-task {
+    display: flex;
+    align-self: flex-end;
+    width: 25%;
+    margin: 1.5% 0 3%;
+    font-size: 0.875rem;
+    letter-spacing: 0.75px;
+    color: #ffffff;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+    padding: 0.7em;
+    justify-content: center;
+    background: #2f80ed;
+    border-style: none;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+      background: #6d9fe0;
     }
+  }
 
-    &__form-search {
-        padding-left: 23%;
-        padding-top: 3%;
-    }
-    
-    &__input-search {
-        height: 2.5rem;
-        width: 100%;
-        background: url('../assets/image/Search.svg') 3% center no-repeat;
-        background-color: #f5f5f5;
-        padding-left: 13%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        border: 1px solid #E2E2E2;
-        box-sizing: border-box;
-        box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
-    }
-
-    &__nav {
-        display: flex;
-        margin: 4.5% 0;
-        border-top: solid 1px #E2E2E2;
-    }
-
-    &__form-task {
-        display: flex;
-        flex-direction: column;
-        font-family: Salesforce Sans;
-        color: #706E6B;
-
-        & label {
-            font-size: 0.75rem;
-        }
-    }
-
-    &__button-task {
-        display: flex;
-        align-self: flex-end;
-        width: 25%;
-        margin: 1.5% 0 3%;
-        font-size: 0.875rem;
-        letter-spacing: 0.75px;
-        color: #FFFFFF;
-        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-        padding: 0.7em;
-        justify-content: center;
-        background: #2F80ED;
-        border-style: none;
-
-        &:hover {
-            cursor: pointer;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
-            background: #6d9fe0;
-        }
-    }
-
-    &__list {
-        display: flex;
-        flex-direction: column;
-        row-gap: 1em;
-        padding-bottom: 1em;
-        margin-block: 0;
-        padding-inline-start: 0;
-        list-style-type: none;
-    }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    padding-bottom: 1em;
+    margin-block: 0;
+    padding-inline-start: 0;
+    list-style-type: none;
+  }
 }
 
 textarea {
-    background: #FFFFFF;
-    border: 1px solid #DDDBDA;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding: 0.5em;
+  background: #ffffff;
+  border: 1px solid #dddbda;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5em;
 }
 
 .container-nav__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Roboto;
-    font-weight: 900;
-    color: #53565A;
-    opacity: 0.5;
-    height: 3em;
-    padding-top: 1em;
-    width: 11em;
-    box-sizing: border-box;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  font-weight: 900;
+  color: #53565a;
+  opacity: 0.5;
+  height: 3em;
+  padding-top: 1em;
+  width: 11em;
+  box-sizing: border-box;
+  cursor: pointer;
 
-    &:hover, &.active {
-        border-top: solid 4px #2F80ED;
-        opacity: 1;
-        padding-top: calc(1em - 4px);
-    }
+  &:hover,
+  &.active {
+    border-top: solid 4px #2f80ed;
+    opacity: 1;
+    padding-top: calc(1em - 4px);
+  }
 }
 
 li {
-    display: flex;
-    justify-content: flex-end;
-    background: #FFFFFF;
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    height: 5em;
-    padding: 0.5em;
+  display: flex;
+  justify-content: flex-end;
+  background: #ffffff;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 5em;
+  padding: 0.5em;
 
-    &:hover {
-        border: 1px solid rgba(47, 128, 237, 0.5);
-        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
-        padding: calc(0.5em - 1px);
-        cursor: pointer;
-    }
+  &:hover {
+    border: 1px solid rgba(47, 128, 237, 0.5);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    padding: calc(0.5em - 1px);
+    cursor: pointer;
+  }
 
-    &:hover button {
-        visibility: visible;
-    }
+  &:hover button {
+    visibility: visible;
+  }
 }
 
 p {
-    display: flex;
-    flex-grow: 1;
-    margin: 0 3%;
-    text-align: start;
+  display: flex;
+  flex-grow: 1;
+  margin: 0 3%;
+  text-align: start;
 }
 
 .is-done {
-    p {
-        text-decoration: line-through;
-    }
+  p {
+    text-decoration: line-through;
+  }
 
-    .important-btn {
-        visibility: hidden;
-    }
+  .important-btn {
+    visibility: hidden;
+  }
 }
 
 .is-important {
-    .symbol-star {
-        display: block;
-    }
+  .symbol-star {
+    display: block;
+  }
 
-    p {
-        font-weight: bold;
-    }
+  p {
+    font-weight: bold;
+  }
 
-    .important-btn {
-        background-color: rgba(196, 196, 196, 0.507);
+  .important-btn {
+    background-color: rgba(196, 196, 196, 0.507);
 
-        &:after {
-            content: "not important";
-        }
+    &:after {
+      content: "not important";
     }
+  }
 }
 
 .important-btn {
-    visibility: hidden;
-    width: 24%;
-    height: 2.5em;
-    margin-left: 7%;
-    background-color: #59e784;
-    border: none;
-    border-radius: 1.25em;
-    font-size: 0.875rem;
-    color: #FFFFFF;
-    font-family: Roboto;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.75px;
-    text-transform: uppercase;
+  visibility: hidden;
+  width: 24%;
+  height: 2.5em;
+  margin-left: 7%;
+  background-color: #59e784;
+  border: none;
+  border-radius: 1.25em;
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
 
-    &:hover {
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
-    }
+  &:hover {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  }
 
-    &:active {
-        background-color: #82f3a4;
-    }
+  &:active {
+    background-color: #82f3a4;
+  }
 
-    &:focus {
-        outline: none;
-        border: 2px solid #464444;
-    }
+  &:focus {
+    outline: none;
+    border: 2px solid #464444;
+  }
 
-    &:after {
-        content: "mark important";
-    }
+  &:after {
+    content: "mark important";
+  }
 }
 
 .delete-btn {
-    visibility: hidden;
-    width: 36px;
-    height: 36px;
-    margin-left: 3%;
-    border-radius: 50%;
-    background:  url('../assets/image/Delete.svg') rgba(196, 196, 196, 0.507) no-repeat center;
-    border: none;
+  visibility: hidden;
+  width: 36px;
+  height: 36px;
+  margin-left: 3%;
+  border-radius: 50%;
+  background: url("../assets/image/Delete.svg") rgba(196, 196, 196, 0.507) no-repeat center;
+  border: none;
 
-    &:hover {
-        box-shadow: 0px 3px 6px rgba(10, 10, 10, 0.5);
-    }
+  &:hover {
+    box-shadow: 0px 3px 6px rgba(10, 10, 10, 0.5);
+  }
 
-    &:active {
-        background-color: #e98282;
-    }
+  &:active {
+    background-color: #e98282;
+  }
 
-    &:focus {
-        outline: none;
-        border: 2px solid #464444;
-    }
+  &:focus {
+    outline: none;
+    border: 2px solid #464444;
+  }
 }
 
 .symbol-star {
-    background: url('../assets/image/star_border.svg') no-repeat top;
-    min-width: 20px;
-    display: none;
+  background: url("../assets/image/star_border.svg") no-repeat top;
+  min-width: 20px;
+  display: none;
 }
