@@ -1,44 +1,52 @@
-'use strict';
+import * as DOM from './dom';
+import * as storage from './storage';
 
-let activeTab; // All || Active || Done
-let tasks = [];
-/*{
-    text: '',
-    isImportant: false,
-    isDone: false
-}*/
+let activeTabName; // All || Active || Done
 
-function add(text) {
+function addTask(text) {
     let task = {
+        id: Math.round((Math.random() * 100000000)),
         text: text,
         isImportant: false,
         isDone: false
     };
-    tasks.push(task);
-
-    // TODO add to DOM
+    let tasks = storage.getTasks();
+    tasks.unshift(task);
+    storage.setTasks(tasks);
+    DOM.addTask(task);
 }
 
-function remove(i) {
+function removeTask(id) {
+    let tasks = storage.getTasks();
+    let i = tasks.indexOf(x => x.id === id);
     tasks.splice(i, 1);
-
-    // TODO remove from DOM
+    storage.setTasks(tasks);
+    DOM.removeTask(id);
 }
 
-function switchIsImportant(i, isImportant) {
-    tasks[i].isImportant = isImportant;
-
-    // TODO update in DOM
+function switchIsImportant(id) {
+    let tasks = storage.getTasks();
+    let task = tasks.find(x => x.id === id);
+    task.isImportant = !task.isImportant;
+    storage.setTasks(tasks);
+    DOM.toggleIsImportant(task.id);
 }
 
-function switchIsDone(i, isDone) {
-    tasks[i].isDone = isDone;
-
-    // TODO update in DOM
+function switchIsDone(id) {
+    let tasks = storage.getTasks();
+    let task = tasks.find(x => x.id === id);
+    task.isDone = !task.isDone;
+    storage.setTasks(tasks);
+    DOM.toggleIsDone(task.id);
+    if ((activeTabName === 'Active' && task.isDone) || 
+        (activeTabName === 'Done' && !task.isDone)) {
+        DOM.removeTask(task.id);
+    }
 }
 
 function renderTasks(tasks) {
-    // TODO
+    DOM.removeAllTasks();
+    tasks.forEach(x => DOM.addTask(x));
 }
 
 function search(q) {
@@ -47,52 +55,77 @@ function search(q) {
     renderTasks(tasksToShow);
 }
 
-function switchTab(tab) {
-    activeTab = tab;
-
-    // TODO update active tab in DOM
-
+function switchTab(tabName) {
+    activeTabName = tabName;
+    DOM.setActiveTab(tabName);
     let tasksToShow = getTasksForActiveTab();
     renderTasks(tasksToShow);
 }
 
 function getTasksForActiveTab() {
-    switch (activeTab) {
+    let tasks = storage.getTasks();
+    switch (activeTabName) {
         case 'All': return tasks;
         case 'Active': return tasks.filter(x => x.isDone === false);
         case 'Done': return tasks.filter(x => x.isDone === true);
-        default: throw new Error(`Неподдерживаемое значение activeTab: ${activeTab}.`);
+        default: throw new Error(`Неподдерживаемое значение activeTab: ${activeTabName}.`);
     }
 }
 
-const button = document.querySelector('.container__button-task');
-const list = document.querySelector('.container__list');
-button.addEventListener('click', function() {
-    const li = document.createElement('li');
-    let textareaValue = document.getElementById('textarea-task').value;
-    const importantBtn = document.createElement('button');
-    importantBtn.className = 'important-btn';
-    importantBtn.textContent = 'mark important';
-    const deleteBtn = document.createElement('button');
-    deleteBtn.className = 'delete-btn';
-    if (textareaValue === '') {
+function onSearchInput(e) {
+    search(e.target.value);
+}
+
+function onTabsContainerClick(e) {
+    if (!e.target.classList.contains('container-nav__item')) return;
+    let tab = e.target.textContent;
+    switchTab(tab);
+}
+
+function onTaskFormSubmit(e) {
+    let textAreaEl = e.target.querySelector('#textarea-task');
+    let taskText = textAreaEl.value;
+    if (!taskText) {
         alert('To add a task enter some text!');
-    } else {
-        li.textContent = textareaValue;
-        li.append(importantBtn);
-        li.append(deleteBtn);
-        list.append(li);
-        document.getElementById('textarea-task').value = '';
+        return;
     }
-});
+    addTask(taskText);
+    textAreaEl.value = '';
+}
 
-document.addEventListener('click', function(e) {
-    if (e.target.parentElement !== 'LI') return;
-    // if (e.target.className === 'delete-btn') {
-        e.target.parentElement.hidden = true;
-    // } else {
+function onTasksListClick(e) {
+    if (e.target.classList.contains('container__list')) return;
+    
+    let li = e.target.closest('li');
+    let id = +li.dataset.id;
 
-    // };
-});
+    switch (e.target.tagName.toLowerCase()) {
+        case 'li':
+        case 'p':
+        case 'span':
+            switchIsDone(id);
+            break;
+        case 'button': {
+            if (e.target.classList.contains('important-btn')) {
+                switchIsImportant(id);
+            } else if (e.target.classList.contains('delete-btn')) {
+                removeTask(id);
+            } else {
+                throw new Error(`Неподдерживаемое значение className: ${e.target.className}.`);
+            }
+            break;
+        }
+        default: throw new Error(`Неподдерживаемое значение tagName: ${e.target.tagName}.`);
+    }
+}
+
+let searchInputEl = document.querySelector('.container__input-search');
+searchInputEl.addEventListener('input', onSearchInput);
+let tabsContainerEl = document.querySelector('.container__nav');
+tabsContainerEl.addEventListener('click', onTabsContainerClick);
+let taskFormEl = document.querySelector('.container__form-task');
+taskFormEl.addEventListener('submit', onTaskFormSubmit);
+let tasksContainerEl = document.querySelector('.container__list');
+tasksContainerEl.addEventListener('click', onTasksListClick);
 
 switchTab('All');
