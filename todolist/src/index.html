@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
+</head>
+
+<body>
+  <main class="content">
+    <div class="content__wrapper">
+      <img src="./assets/image/taking_notes.svg" alt="Человек в костюме развешивает записки на доске">
+    </div>
+    <section class="container">
+      <header class="container__head">
+        <div class="container__logo">
+          <a class="container__logo--link" href="https://senlainc.com/">
+            <img src="./assets/image/Logo.svg" alt="Логотип компании Senla">
+          </a>
+        </div>
+        <form class="container__form-search">
+          <input class="container__input-search" type="text" name="name-search" placeholder="Search task for to do">
+        </form>
+        <nav class="container__nav container-nav">
+          <div class="container-nav__item">All</div>
+          <div class="container-nav__item">Active</div>
+          <div class="container-nav__item">Done</div>
+        </nav>
+      </header>
+      <form class="container__form-task" action="javascript:void(0)">
+        <label for="textarea-task">New Task</label>
+        <textarea id="textarea-task" name="task" rows="5"></textarea>
+        <button type="submit" class="container__button-task">ADD</button>
+      </form>
+      <ul class="container__list container-list">
+        <!-- <li class="container-list__item" data-id="4364545">
+          <span class="symbol-star"></span>
+          <p>11111</p>
+          <span class="symbol-star"></span>
+          <button class="important-btn"></button>
+          <button class="delete-btn"></button>
+        </li> -->
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
