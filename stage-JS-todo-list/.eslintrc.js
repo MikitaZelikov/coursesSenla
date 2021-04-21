@@ -14,5 +14,6 @@ module.exports = {
     'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'no-alert': 'off',
     'linebreak-style': 'off',
+    'no-restricted-syntax': 'off',
   },
 };
