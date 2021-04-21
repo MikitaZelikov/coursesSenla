@@ -1,131 +1,146 @@
-import * as DOM from './dom';
+import * as dom from './dom';
 import * as storage from './storage';
 
-let activeTabName; // All || Active || Done
+// const tasks = [];
+let activeTab;
+setActiveTab('All');
 
-function addTask(text) {
-  const task = {
-    id: Math.round((Math.random() * 100000000)),
-    text,
-    isImportant: false,
-    isDone: false,
-  };
-  const tasks = storage.getTasks();
-  tasks.unshift(task);
-  storage.setTasks(tasks);
-  DOM.addTask(task);
-}
+// add handlers
+const searchArea = document.querySelector('.container__input-search');
+searchArea.addEventListener('input', onSearchClick);
 
-function removeTask(id) {
-  const tasks = storage.getTasks();
-  const i = tasks.indexOf((x) => x.id === id);
-  tasks.splice(i, 1);
-  storage.setTasks(tasks);
-  DOM.removeTask(id);
-}
+const tabArea = document.querySelector('.container__nav');
+tabArea.addEventListener('click', onTabsClick);
 
-function switchIsImportant(id) {
-  const tasks = storage.getTasks();
-  const task = tasks.find((x) => x.id === id);
-  task.isImportant = !task.isImportant;
-  storage.setTasks(tasks);
-  DOM.toggleIsImportant(task.id);
-}
+const taskForm = document.querySelector('.container__form-task');
+taskForm.addEventListener('submit', onTaskFormSubmit);
 
-function switchIsDone(id) {
-  const tasks = storage.getTasks();
-  const task = tasks.find((x) => x.id === id);
-  task.isDone = !task.isDone;
-  storage.setTasks(tasks);
-  DOM.toggleIsDone(task.id);
-  if ((activeTabName === 'Active' && task.isDone)
-      || (activeTabName === 'Done' && !task.isDone)) {
-    DOM.removeTask(task.id);
-  }
-}
+const listArea = document.querySelector('.container__list');
+listArea.addEventListener('click', onListAreaClick);
 
-function renderTasks(tasks) {
-  DOM.removeAllTasks();
-  tasks.forEach((x) => DOM.addTask(x));
-}
-
-function search(q) {
-  let tasksToShow = getTasksForActiveTab();
-  tasksToShow = tasksToShow.filter((x) => x.text.toLowerCase().includes(q.toLowerCase()));
-  renderTasks(tasksToShow);
-}
-
-function switchTab(tabName) {
-  activeTabName = tabName;
-  DOM.setActiveTab(tabName);
-  const tasksToShow = getTasksForActiveTab();
-  renderTasks(tasksToShow);
-}
-
-function getTasksForActiveTab() {
-  const tasks = storage.getTasks();
-  switch (activeTabName) {
-    case 'All': return tasks;
-    case 'Active': return tasks.filter((x) => x.isDone === false);
-    case 'Done': return tasks.filter((x) => x.isDone === true);
-    default: throw new Error(`Неподдерживаемое значение activeTab: ${activeTabName}.`);
-  }
-}
-
-function onSearchInput(e) {
-  search(e.target.value);
-}
-
-function onTabsContainerClick(e) {
-  if (!e.target.classList.contains('container-nav__item')) return;
-  const tab = e.target.textContent;
-  switchTab(tab);
+// functions-handlers
+function onSearchClick(e) {
+  const inputValue = e.target.value;
+  const tasksOfClickedTab = getTasksForClickedTab(activeTab);
+  const tasksContainValue = tasksOfClickedTab.filter((x) => x.text.includes(inputValue));
+  listArea.innerHTML = '';
+  displayTasksForClickedTab(tasksContainValue);
 }
 
 function onTaskFormSubmit(e) {
-  const textAreaEl = e.target.querySelector('#textarea-task');
-  const taskText = textAreaEl.value;
+  const textareaEl = e.target.querySelector('#textarea-task');
+  const taskText = textareaEl.value;
   if (!taskText) {
-    alert('To add a task enter some text!');
+    alert('Please, entering some text of task!');
     return;
   }
   addTask(taskText);
-  textAreaEl.value = '';
+  textareaEl.value = '';
 }
 
-function onTasksListClick(e) {
-  if (e.target.classList.contains('container__list')) return;
-
-  const li = e.target.closest('li');
-  const id = +li.dataset.id;
-
-  switch (e.target.tagName.toLowerCase()) {
-    case 'li':
-    case 'p':
-    case 'span':
-      switchIsDone(id);
-      break;
-    case 'button': {
-      if (e.target.classList.contains('important-btn')) {
-        switchIsImportant(id);
-      } else if (e.target.classList.contains('delete-btn')) {
-        removeTask(id);
-      } else {
-        throw new Error(`Неподдерживаемое значение className: ${e.target.className}.`);
+function onListAreaClick(e) {
+  const listEl = e.target.tagName;
+  if (listEl === 'UL') return;
+  const idTask = e.target.closest('li').dataset.id;
+  switch (listEl) {
+    case 'LI':
+    case 'SPAN':
+    case 'P':
+      if (idTask) {
+        toggleDone(idTask);
       }
       break;
-    }
-    default: throw new Error(`Неподдерживаемое значение tagName: ${e.target.tagName}.`);
+    case 'BUTTON':
+      if (e.target.className === 'delete-btn') {
+        deleteEl(idTask);
+      } else {
+        toggleImportant(idTask);
+      }
+      break;
+    case 'UL':
+      return;
+    default:
+      alert('Unsupported value of tagName!');
   }
 }
 
-const searchInputEl = document.querySelector('.container__input-search');
-searchInputEl.addEventListener('input', onSearchInput);
-const tabsContainerEl = document.querySelector('.container__nav');
-tabsContainerEl.addEventListener('click', onTabsContainerClick);
-const taskFormEl = document.querySelector('.container__form-task');
-taskFormEl.addEventListener('submit', onTaskFormSubmit);
-const tasksContainerEl = document.querySelector('.container__list');
-tasksContainerEl.addEventListener('click', onTasksListClick);
+function onTabsClick(e) {
+  if (!e.target.classList.contains('container-nav__item')) return;
+  listArea.innerHTML = '';
+  const tabName = e.target.textContent;
+  setActiveTab(tabName);
+}
 
-switchTab('All');
+// functions
+function setActiveTab(tabName) {
+  activeTab = tabName;
+  dom.setActiveTab(tabName);
+  const filteredTasks = getTasksForClickedTab(tabName);
+  displayTasksForClickedTab(filteredTasks);
+}
+
+function getTasksForClickedTab(tabName) {
+  const tasks = storage.getStorage();
+  if (tabName === 'All') {
+    return tasks;
+  }
+  if (tabName === 'Active') {
+    return tasks.filter((x) => x.isDone === false);
+  }
+  if (tabName === 'Done') {
+    return tasks.filter((x) => x.isDone === true);
+  }
+  return alert('Unsupported value of tabName!');
+}
+
+function displayTasksForClickedTab(filteredTasks) {
+  filteredTasks.forEach((x) => dom.addTask(x));
+}
+function addTask(taskText) {
+  const task = {
+    id: Math.round(Math.random() * 10000000),
+    text: '',
+    isImportant: false,
+    isDone: false,
+  };
+  task.text = taskText;
+  const tasks = storage.getStorage();
+  tasks.push(task);
+  storage.setStorage(tasks);
+  dom.addTask(task);
+}
+
+function deleteEl(idTask) {
+  const tasks = storage.getStorage();
+  const taskForDelete = tasks.find((x) => x.id === +idTask);
+  const indexTaskForDelete = tasks.indexOf(taskForDelete);
+  tasks.splice(indexTaskForDelete, 1);
+  storage.setStorage(tasks);
+  dom.removeTask(idTask);
+}
+
+function toggleImportant(idTask) {
+  const tasks = storage.getStorage();
+  const importantTask = tasks.find((x) => x.id === +idTask);
+  importantTask.isImportant = !importantTask.isImportant;
+  storage.setStorage(tasks);
+  dom.toggleImportant(idTask);
+}
+
+function toggleDone(idTask) {
+  const tasks = storage.getStorage();
+  const doneTask = tasks.find((x) => x.id === +idTask);
+  doneTask.isDone = !doneTask.isDone;
+  storage.setStorage(tasks);
+  switch (activeTab) {
+    case 'All':
+      dom.toggleDone(idTask);
+      break;
+    case 'Active':
+    case 'Done':
+      dom.removeTask(idTask);
+      break;
+    default:
+      alert('Unsupported value of activeTab');
+  }
+}

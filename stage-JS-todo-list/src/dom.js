@@ -1,20 +1,20 @@
-/** Add li with nested markup */
+/** creat li-element in DOM-tree */
+// eslint-disable-next-line import/prefer-default-export
 export function addTask(task) {
   const list = document.querySelector('.container__list');
 
   const li = document.createElement('li');
-  li.className = 'container-list__item';
-  if (task.isDone) {
+  li.dataset.id = task.id;
+  if (task.isDone === true) {
     li.classList.add('is-done');
   }
-  if (task.isImportant) {
+  if (task.isImportant === true) {
     li.classList.add('is-important');
   }
-  li.dataset.id = task.id;
 
   const symbolStar = document.createElement('span');
   symbolStar.className = 'symbol-star';
-  li.prepend(symbolStar);
+  li.append(symbolStar);
 
   const p = document.createElement('p');
   p.textContent = task.text;
@@ -31,37 +31,34 @@ export function addTask(task) {
   list.prepend(li);
 }
 
-export function removeTask(id) {
-  const li = getLi(id);
-  li.remove();
+export function removeTask(idTask) {
+  const liElem = getLiEl(idTask);
+  liElem.remove();
 }
 
-export function removeAllTasks() {
-  const list = document.querySelector('.container__list');
-  list.innerHTML = '';
+export function toggleDone(idTask) {
+  const liElem = getLiEl(idTask);
+  liElem.classList.toggle('is-done');
 }
 
-export function toggleIsImportant(id) {
-  const li = getLi(id);
-  li.classList.toggle('is-important');
+export function toggleImportant(idTask) {
+  const liElem = getLiEl(idTask);
+  liElem.classList.toggle('is-important');
 }
 
-export function toggleIsDone(id) {
-  const li = getLi(id);
-  li.classList.toggle('is-done');
-}
-
-export function setActiveTab(tabName) {
-  const navEl = document.querySelector('.container__nav');
-  const prevActiveTabEl = navEl.querySelector('.active');
+export function setActiveTab(activeTab) {
+  const prevActiveTabEl = document.querySelector('.active');
   if (prevActiveTabEl) {
     prevActiveTabEl.classList.remove('active');
   }
-
-  const activeTabEl = Array.from(navEl.children).find((x) => x.textContent === tabName);
-  activeTabEl.classList.add('active');
+  const tabs = document.querySelectorAll('.container-nav__item');
+  for (const tab of tabs) {
+    if (tab.textContent === activeTab) {
+      tab.classList.add('active');
+    }
+  }
 }
 
-function getLi(id) {
-  return document.querySelector(`.container-list__item[data-id="${id}"]`);
+function getLiEl(idTask) {
+  return document.querySelector(`li[data-id="${idTask}"]`);
 }
